@@ -1,2 +1,3 @@
 # Perfomix
- build-up audio effects with looper
+ Build-up audio effects with looper function.
+ 
