@@ -1,0 +1,17 @@
+#N canvas 827 239 527 327 12;
+#X obj 119 211 else/play.file~;
+#X msg 109 113 loop 1;
+#X msg 157 145 start;
+#X msg 249 145 stop;
+#X obj 267 199 vsl 17 128 0 1 0 0 empty empty empty 0 -9 0 10 #e4e4e4 #4d4d4d #373737 0 1;
+#X obj 210 262 *~ 0;
+#X msg 74 79 open APOLLO.wav;
+#X obj 179 334 dac~;
+#X connect 0 0 5 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 5 1;
+#X connect 5 0 7 0;
+#X connect 5 0 7 1;
+#X connect 6 0 0 0;
