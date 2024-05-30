@@ -2,3 +2,4 @@
 *.wav
 *.mp3
 /extra/examples
+*.kate-swp
