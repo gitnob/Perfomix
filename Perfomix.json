@@ -1,7 +1,7 @@
 {
     "dpf": {
         "project": true,
-        "description": "Performance Mixer for techno live performances",
+        "description": "Build-up audio effects with looper and single crossfade function",
         "maker": "nobisoft",
         "plugin_uri": "lv2://nobisoft.de/Perfomix",
         "version": "0, 1, 0",
