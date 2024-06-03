@@ -8,8 +8,8 @@
         "license": "lic:GPLv3",
         "midi_input": 0,
         "midi_output": 0,
-	"dpf_path": "../gen/",
-	"enable_ui": true,
+        "dpf_path": "../gen/",
+        "enable_ui": true,
         "plugin_formats": [
             "lv2_dsp"
         ]
