@@ -275,7 +275,7 @@
 #X obj 1412 458 lop~ 10;
 #X obj 1193 506 lop~ 10;
 #X obj 39 123 > 0.04;
-#N canvas 0 50 450 300 buildup_ramp 0;
+#N canvas 0 50 450 300 buildup_ramp 1;
 #X obj 323 53 inlet bpm;
 #X obj 367 241 / 1;
 #X obj 323 114 change;
@@ -299,7 +299,7 @@
 #X obj 708 80 loadbang;
 #X msg 803 114 1;
 #X obj 470 114 int;
-#X obj 255 355 f;
+#X obj 224 342 f;
 #X obj 371 277 f;
 #X obj 371 306 * 1;
 #X obj 421 252 t b f;
@@ -370,7 +370,7 @@
 #X connect 23 0 8 1;
 #X connect 23 0 29 1;
 #X connect 24 0 25 0;
-#X connect 25 0 23 1;
+#X connect 25 0 23 0;
 #X connect 26 0 24 0;
 #X connect 26 1 25 1;
 #X connect 27 0 28 0;
