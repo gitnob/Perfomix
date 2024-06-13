@@ -299,7 +299,7 @@
 #X obj 708 80 loadbang;
 #X msg 803 114 1;
 #X obj 470 114 int;
-#X obj 367 341 f;
+#X obj 255 355 f;
 #X obj 371 277 f;
 #X obj 371 306 * 1;
 #X obj 421 252 t b f;
@@ -347,8 +347,8 @@
 #X connect 0 0 2 0;
 #X connect 1 0 24 0;
 #X connect 2 0 6 0;
-#X connect 3 0 8 0;
 #X connect 3 0 58 0;
+#X connect 3 0 8 0;
 #X connect 4 0 17 0;
 #X connect 5 0 22 0;
 #X connect 6 0 1 0;
@@ -367,10 +367,10 @@
 #X connect 20 0 17 0;
 #X connect 21 0 67 0;
 #X connect 22 0 26 0;
-#X connect 23 0 8 0;
-#X connect 23 0 29 0;
+#X connect 23 0 8 1;
+#X connect 23 0 29 1;
 #X connect 24 0 25 0;
-#X connect 25 0 23 0;
+#X connect 25 0 23 1;
 #X connect 26 0 24 0;
 #X connect 26 1 25 1;
 #X connect 27 0 28 0;
@@ -3726,7 +3726,6 @@
 #X connect 67 0 34 0;
 #X connect 68 0 36 0;
 #X restore 1600 650 pd filter_chain;
-#X obj 1268 123 r~ in-debug-1;
 #X connect 1 0 12 0;
 #X connect 2 0 50 0;
 #X connect 3 0 89 0;
@@ -3865,7 +3864,3 @@
 #X connect 137 1 138 1;
 #X connect 138 0 87 0;
 #X connect 138 1 87 1;
-#X connect 139 0 8 0;
-#X connect 139 0 9 0;
-#X connect 139 0 13 0;
-#X connect 139 0 13 1;
