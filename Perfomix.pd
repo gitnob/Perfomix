@@ -84,9 +84,6 @@
 #X obj 331 261 select 1 2 0;
 #X msg 454 315 0;
 #X msg 351 304 1;
-#X obj 932 437 tabread4~;
-#X obj 761 530 table \$0-reverse-l 440962;
-#X obj 773 560 table \$0-reverse-r 440962;
 #X connect 0 0 38 0;
 #X connect 1 0 39 0;
 #X connect 2 0 9 0;
