@@ -1,14 +1,13 @@
 _00_cross_fader,Crossfader	,00_mixer_group,Mixer
 _01_cross_trigger,Crossfade ON,00_mixer_group,Mixer
 _02_bpm_custom,BPM,00_mixer_group,Mixer
-_23_buildup_amplitude,Manual FX,03_buildup_group,Mixer
 _10_looper_onoff,On Off,02_looper_group,Looper
 _11_looper_beat_part,Notes division,02_looper_group,Looper
 _12_looper_beat_triplet,Triplet division,02_looper_group,Looper
-_13_reverse_repeat,Reverse,02_looper_group,Looper
 _20_buildup_style,Style,03_buildup_group,Build-up
 _21_buildup_length,Length,03_buildup_group,Build-up
 _22_buildup_retrigger,Retrigger ON,03_buildup_group,Build-up
+_23_buildup_amplitude,Amplitude,03_buildup_group,Build-up
 _30_sources_onoff,Source FX chain,10_sources_group,Sources
 _31_buildup_sources_amount,Buildup Volume,10_sources_group,Sources
 _40_p_noise_amount,Volume,11_pink_noise_group,Pink Noise
