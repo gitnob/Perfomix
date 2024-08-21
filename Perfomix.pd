@@ -212,7 +212,13 @@
 #X obj 1074 734 pack f f f;
 #X msg 1074 770 \$1 \, \$2 \$3;
 <<<<<<< HEAD
+<<<<<<< HEAD
 #X floatatom 1203 661 5 0 0 0 - - - 0;
+=======
+#X floatatom 1097 697 5 0 0 0 - - - 0;
+#X floatatom 1148 697 5 0 0 0 - - - 0;
+#X floatatom 1199 697 5 0 0 0 - - - 0;
+>>>>>>> parent of 1ad68d8 (Revert "Added reverse repeat")
 =======
 #X floatatom 1097 697 5 0 0 0 - - - 0;
 #X floatatom 1148 697 5 0 0 0 - - - 0;
@@ -236,11 +242,14 @@
 #X obj 1174 847 vd~ \$0-del-r;
 #X obj 1097 105 inlet reverse_repeat;
 <<<<<<< HEAD
+<<<<<<< HEAD
 #X obj 989 546 loadbang;
 #X obj 1195 697 f;
 #X obj 1102 697 f;
 #X obj 1028 697 f;
 #X msg 991 630 0;
+=======
+>>>>>>> parent of 1ad68d8 (Revert "Added reverse repeat")
 =======
 >>>>>>> parent of 1ad68d8 (Revert "Added reverse repeat")
 #X connect 0 0 53 0;
@@ -257,15 +266,21 @@
 #X connect 11 0 12 0;
 #X connect 12 0 15 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 #X connect 13 0 71 0;
 #X connect 13 0 77 0;
 #X connect 13 1 73 0;
 #X connect 13 1 78 0;
 =======
+=======
+>>>>>>> parent of 1ad68d8 (Revert "Added reverse repeat")
 #X connect 13 0 73 0;
 #X connect 13 0 79 0;
 #X connect 13 1 75 0;
 #X connect 13 1 80 0;
+<<<<<<< HEAD
+>>>>>>> parent of 1ad68d8 (Revert "Added reverse repeat")
+=======
 >>>>>>> parent of 1ad68d8 (Revert "Added reverse repeat")
 #X connect 14 0 34 0;
 #X connect 15 0 17 0;
@@ -282,7 +297,11 @@
 #X connect 24 0 25 0;
 #X connect 25 0 10 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 #X connect 25 0 68 0;
+=======
+#X connect 25 0 70 0;
+>>>>>>> parent of 1ad68d8 (Revert "Added reverse repeat")
 =======
 #X connect 25 0 70 0;
 >>>>>>> parent of 1ad68d8 (Revert "Added reverse repeat")
@@ -319,15 +338,21 @@
 #X connect 49 0 55 0;
 #X connect 50 0 56 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 #X connect 51 0 71 0;
 #X connect 51 0 77 0;
 #X connect 52 0 73 0;
 #X connect 52 0 78 0;
 =======
+=======
+>>>>>>> parent of 1ad68d8 (Revert "Added reverse repeat")
 #X connect 51 0 73 0;
 #X connect 51 0 79 0;
 #X connect 52 0 75 0;
 #X connect 52 0 80 0;
+<<<<<<< HEAD
+>>>>>>> parent of 1ad68d8 (Revert "Added reverse repeat")
+=======
 >>>>>>> parent of 1ad68d8 (Revert "Added reverse repeat")
 #X connect 53 0 13 0;
 #X connect 54 0 13 1;
@@ -340,6 +365,7 @@
 #X connect 59 0 60 0;
 #X connect 59 1 58 0;
 #X connect 60 0 32 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 #X connect 61 0 79 0;
 #X connect 61 0 80 0;
@@ -373,6 +399,8 @@
 #X connect 85 0 62 0;
 #X connect 86 0 85 0;
 =======
+=======
+>>>>>>> parent of 1ad68d8 (Revert "Added reverse repeat")
 #X connect 61 0 81 0;
 #X connect 61 0 82 0;
 #X connect 62 0 63 0;
@@ -401,6 +429,9 @@
 #X connect 81 0 77 0;
 #X connect 82 0 78 0;
 #X connect 83 0 69 0;
+<<<<<<< HEAD
+>>>>>>> parent of 1ad68d8 (Revert "Added reverse repeat")
+=======
 >>>>>>> parent of 1ad68d8 (Revert "Added reverse repeat")
 #X restore 1590 358 pd repeater;
 #X obj 579 515 tgl 25 0 empty empty empty 17 7 0 10 #e4e4e4 #4d4d4d #373737 0 1;
