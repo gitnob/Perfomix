@@ -50,3 +50,4 @@ cp -r gen/bin/Perfomix.lv2 $ZYNTHIAN_PLUGINS_DIR
 
 
 
+
