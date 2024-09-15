@@ -63,4 +63,6 @@ cp -r gen/bin/Perfomix.lv2 $ZYNTHIAN_PLUGINS_DIR/lv2
 source $ZYNTHIAN_DIR/venv/bin/activate
 ```
 
+Update the engines in webconf and toggle Perfomix.
+
 
