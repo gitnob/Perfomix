@@ -15,6 +15,11 @@ Load the Perfomix.pd patch and compile as described on their website. This is av
 Because at the moment plugdata does not have a arm64 export mechanism, it is necessary to compile the plugin for the raspberry pi OS on the command line.
 Compilation on the command line involves some basic understanding of directories and text editing. You also need git.
 
+**Deactivate Zynthian's virtual python environment!!**
+```
+deactivate  # deactivates the actual zynthian virtual python environment
+```
+
 Choose a directory for the source
 ```
 mkdir src
@@ -39,15 +44,23 @@ Compile by using the Perfomix specific config.sh file
 bin/compile.sh -c pd/Perfomix/perfomix.sh
 ```
 
+Copy custom manifest.ttl files into newly generated lv directory
+```
+cp pd/Perfomix/*.ttl $PWD/gen/bin/Perfomix.lv2
+```
+
 Link (or copy) the Perfomix lv2 plugin into zynthian's plugin directory
 ```
-ln -s $PWD/gen/bin/Perfomix.lv2 $ZYNTHIAN_PLUGINS_DIR
+ln -s $PWD/gen/bin/Perfomix.lv2 $ZYNTHIAN_PLUGINS_DIR/lv2
 ```
 or
 ```
-cp -r gen/bin/Perfomix.lv2 $ZYNTHIAN_PLUGINS_DIR
+cp -r gen/bin/Perfomix.lv2 $ZYNTHIAN_PLUGINS_DIR/lv2
 ```
 
-
+**Activate Zynthian's virtual python environment again!!**
+```
+source $ZYNTHIAN_DIR/venv/bin/activate
+```
 
 
