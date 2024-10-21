@@ -34,6 +34,48 @@
             lv2:maximum 9 ;
             lv2:minimum 0 ;
             lv2:name "Notes division" ;
+            lv2:portProperty lv2:enumeration ;
+            lv2:scalePoint [
+                rdfs:label  "1/256" ;
+                rdf:value 0 ;
+            ] ,
+            [
+                rdfs:label  "1/128" ;
+                rdf:value 1 ;
+            ] ,
+            [
+                rdfs:label  "1/64" ;
+                rdf:value 2 ;
+            ] ,
+            [
+                rdfs:label  "1/32" ;
+                rdf:value 3 ;
+            ] ,
+            [
+                rdfs:label  "1/16" ;
+                rdf:value 4 ;
+            ] ,
+            [
+                rdfs:label  "1/8" ;
+                rdf:value 5 ;
+            ] ,
+            [
+                rdfs:label  "1/4" ;
+                rdf:value 6 ;
+            ] ,
+            [
+                rdfs:label  "1/2" ;
+                rdf:value 7 ;
+            ] ,
+            [
+                rdfs:label  "1" ;
+                rdf:value 8 ;
+            ] ,
+            [
+                rdfs:label  "2" ;
+                rdf:value 9 ;
+            ] ;
+            lv2:portProperty lv2:integer ;            
             lv2:symbol "_11_looper_beat_part" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -233,6 +275,24 @@
             lv2:maximum 3 ;
             lv2:minimum 0 ;
             lv2:name "Style" ;
+            lv2:portProperty lv2:enumeration ;
+            lv2:scalePoint [
+                rdfs:label  "up+hold" ;
+                rdf:value 0 ;
+            ] ,
+            [
+                rdfs:label  "up repeat" ;
+                rdf:value 1 ;
+            ] ,
+            [
+                rdfs:label  "updown" ;
+                rdf:value 2 ;
+            ] ,
+            [
+                rdfs:label  "manual" ;
+                rdf:value 3 ;
+            ] ;
+            lv2:portProperty lv2:integer ;                        
             lv2:symbol "_20_buildup_style" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
