@@ -4,6 +4,7 @@
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix opts: <http://lv2plug.in/ns/ext/options#> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rsz: <http://lv2plug.in/ns/ext/resize-port#> .
 @prefix ui: <http://lv2plug.in/ns/extensions/ui#> .
@@ -34,6 +35,7 @@
             lv2:maximum 9 ;
             lv2:minimum 0 ;
             lv2:name "Notes division" ;
+            lv2:portProperty lv2:integer;
             lv2:portProperty lv2:enumeration ;
             lv2:scalePoint [
                 rdfs:label  "1/256" ;
@@ -75,8 +77,8 @@
                 rdfs:label  "2" ;
                 rdf:value 9 ;
             ] ;
-            lv2:portProperty lv2:integer ;            
-            lv2:symbol "_11_looper_beat_part" ],
+            lv2:symbol "_11_looper_beat_part" ;
+            ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#44_notch_group> ;
@@ -312,7 +314,32 @@
             lv2:maximum 5 ;
             lv2:minimum 0 ;
             lv2:name "Division" ;
-            lv2:symbol "_i9_pingpong_delay_synced_partial" ],
+            lv2:portProperty lv2:integer;
+            lv2:portProperty lv2:enumeration ;
+            lv2:scalePoint [
+                rdfs:label  "1/64" ;
+                rdf:value 0 ;
+            ] ,
+            [
+                rdfs:label  "1/32" ;
+                rdf:value 1 ;
+            ] ,
+            [
+                rdfs:label  "1/16" ;
+                rdf:value 2 ;
+            ] ,
+            [
+                rdfs:label  "1/8" ;
+                rdf:value 3 ;
+            ] ,
+            [
+                rdfs:label  "1/4" ;
+                rdf:value 4 ;
+            ] ,
+            [
+                rdfs:label  "1/2" ;
+                rdf:value 5 ;
+            ] ;            lv2:symbol "_i9_pingpong_delay_synced_partial" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
@@ -823,6 +850,48 @@
             lv2:maximum 9 ;
             lv2:minimum 0 ;
             lv2:name "Interval" ;
+            lv2:portProperty lv2:integer;
+            lv2:portProperty lv2:enumeration ;
+            lv2:scalePoint [
+                rdfs:label  "1/256" ;
+                rdf:value 0 ;
+            ] ,
+            [
+                rdfs:label  "1/128" ;
+                rdf:value 1 ;
+            ] ,
+            [
+                rdfs:label  "1/64" ;
+                rdf:value 2 ;
+            ] ,
+            [
+                rdfs:label  "1/32" ;
+                rdf:value 3 ;
+            ] ,
+            [
+                rdfs:label  "1/16" ;
+                rdf:value 4 ;
+            ] ,
+            [
+                rdfs:label  "1/8" ;
+                rdf:value 5 ;
+            ] ,
+            [
+                rdfs:label  "1/4" ;
+                rdf:value 6 ;
+            ] ,
+            [
+                rdfs:label  "1/2" ;
+                rdf:value 7 ;
+            ] ,
+            [
+                rdfs:label  "1" ;
+                rdf:value 8 ;
+            ] ,
+            [
+                rdfs:label  "2" ;
+                rdf:value 9 ;
+            ] ;
             lv2:symbol "_91_st_stutter_interval" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -860,6 +929,48 @@
             lv2:maximum 10 ;
             lv2:minimum 3 ;
             lv2:name "Interval" ;
+            lv2:portProperty lv2:integer;
+            lv2:portProperty lv2:enumeration ;
+            lv2:scalePoint [
+                rdfs:label  "1/256" ;
+                rdf:value 0 ;
+            ] ,
+            [
+                rdfs:label  "1/128" ;
+                rdf:value 1 ;
+            ] ,
+            [
+                rdfs:label  "1/64" ;
+                rdf:value 2 ;
+            ] ,
+            [
+                rdfs:label  "1/32" ;
+                rdf:value 3 ;
+            ] ,
+            [
+                rdfs:label  "1/16" ;
+                rdf:value 4 ;
+            ] ,
+            [
+                rdfs:label  "1/8" ;
+                rdf:value 5 ;
+            ] ,
+            [
+                rdfs:label  "1/4" ;
+                rdf:value 6 ;
+            ] ,
+            [
+                rdfs:label  "1/2" ;
+                rdf:value 7 ;
+            ] ,
+            [
+                rdfs:label  "1" ;
+                rdf:value 8 ;
+            ] ,
+            [
+                rdfs:label  "2" ;
+                rdf:value 9 ;
+            ] ;
             lv2:symbol "_a1_stereo_switch_interval" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -897,6 +1008,48 @@
             lv2:maximum 9 ;
             lv2:minimum 3 ;
             lv2:name "Interval" ;
+            lv2:portProperty lv2:integer;
+            lv2:portProperty lv2:enumeration ;
+            lv2:scalePoint [
+                rdfs:label  "1/256" ;
+                rdf:value 0 ;
+            ] ,
+            [
+                rdfs:label  "1/128" ;
+                rdf:value 1 ;
+            ] ,
+            [
+                rdfs:label  "1/64" ;
+                rdf:value 2 ;
+            ] ,
+            [
+                rdfs:label  "1/32" ;
+                rdf:value 3 ;
+            ] ,
+            [
+                rdfs:label  "1/16" ;
+                rdf:value 4 ;
+            ] ,
+            [
+                rdfs:label  "1/8" ;
+                rdf:value 5 ;
+            ] ,
+            [
+                rdfs:label  "1/4" ;
+                rdf:value 6 ;
+            ] ,
+            [
+                rdfs:label  "1/2" ;
+                rdf:value 7 ;
+            ] ,
+            [
+                rdfs:label  "1" ;
+                rdf:value 8 ;
+            ] ,
+            [
+                rdfs:label  "2" ;
+                rdf:value 9 ;
+            ] ;
             lv2:symbol "_b1_stutter_interval" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
