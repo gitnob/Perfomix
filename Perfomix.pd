@@ -1209,7 +1209,7 @@
 #X obj 116 361 /~ 2;
 #X obj 290 227 sig~;
 #X obj 116 290 *~;
-#X obj 621 280 *~;
+#X obj 628 262 *~;
 #X obj 757 233 sig~;
 #X obj 210 308 env~;
 #X obj 210 357 dbtopow;
@@ -1229,12 +1229,13 @@
 #X obj 532 357 +~ 0.75;
 #X obj 532 325 *~ 0.2;
 #X obj 535 414 *~ 1;
+#X obj 843 250 - 0.8;
 #X connect 0 0 4 0;
 #X connect 0 0 93 0;
 #X connect 0 0 96 0;
 #X connect 1 0 5 0;
-#X connect 1 0 94 0;
 #X connect 1 0 103 0;
+#X connect 1 0 112 0;
 #X connect 4 0 2 0;
 #X connect 5 0 3 0;
 #X connect 6 0 19 0;
@@ -1304,6 +1305,7 @@
 #X connect 70 0 58 0;
 #X connect 71 0 68 0;
 #X connect 72 0 95 0;
+#X connect 72 0 114 0;
 #X connect 73 0 72 0;
 #X connect 74 0 58 0;
 #X connect 75 0 60 0;
@@ -1324,7 +1326,6 @@
 #X connect 91 0 82 0;
 #X connect 92 0 93 1;
 #X connect 93 0 90 0;
-#X connect 94 0 112 0;
 #X connect 95 0 94 1;
 #X connect 96 0 97 0;
 #X connect 97 0 98 0;
@@ -1344,6 +1345,7 @@
 #X connect 111 0 110 0;
 #X connect 112 0 111 0;
 #X connect 113 0 109 0;
+#X connect 114 0 112 1;
 #X restore 73 425 pd wavefold;
 #N canvas 0 50 450 300 powdistort 0;
 #X obj 49 42 inlet~ audio_l;
