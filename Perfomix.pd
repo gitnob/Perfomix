@@ -1181,7 +1181,7 @@
 #X msg 1430 593 1;
 #X obj 1038 512 *;
 #X obj 1241 425 t b f;
-#X obj 1048 226 f;
+#X obj 1038 461 f;
 #X obj 1284 561 r _51_wavefold_folding_drive @hv_param 1 20 1;
 #X obj 1390 66 r _52_wavefold_folding_minimum @hv_param 0 100 0;
 #X obj 1390 132 r _53_wavefold_folding_maximum @hv_param 0 100 100;
@@ -1191,7 +1191,7 @@
 #X msg 1536 164 100;
 #X obj 1241 398 / 100;
 #X obj 1241 371 transpose_function 0 100 1 0;
-#X obj 1199 481 f;
+#X obj 1252 461 f;
 #X connect 0 0 4 0;
 #X connect 0 0 37 0;
 #X connect 0 0 58 0;
@@ -1261,7 +1261,7 @@
 #X connect 62 0 63 0;
 #X connect 63 0 61 0;
 #X connect 64 0 8 0;
-#X connect 65 0 64 0;
+#X connect 65 0 66 0;
 #X connect 65 1 76 0;
 #X connect 66 0 64 0;
 #X connect 67 0 61 0;
