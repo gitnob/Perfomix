@@ -560,7 +560,7 @@
             lv2:index 23 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
-            lv2:name "Dry Wet" ;
+            lv2:name "Dry/Wet" ;
             lv2:symbol "_50_wavefold_amount" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -574,19 +574,19 @@
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
-            lv2:default 1 ;
+            lv2:default 0 ;
             lv2:index 25 ;
-            lv2:maximum 20 ;
-            lv2:minimum 1 ;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
             lv2:name "Folding Min" ;
             lv2:symbol "_52_wavefold_folding_minimum" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
-            lv2:default 20 ;
+            lv2:default 100 ;
             lv2:index 26 ;
-            lv2:maximum 20 ;
-            lv2:minimum 1 ;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
             lv2:name "Folding Max" ;
             lv2:symbol "_53_wavefold_folding_maximum" ],
         [ a lv2:ControlPort,
