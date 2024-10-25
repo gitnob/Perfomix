@@ -560,8 +560,17 @@
             lv2:index 23 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
-            lv2:name "Amount" ;
+            lv2:name "Dry/Wet" ;
             lv2:symbol "_50_wavefold_amount" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
+            lv2:default 1 ;
+            lv2:index 28 ;
+            lv2:maximum 20 ;
+            lv2:minimum 1 ;
+            lv2:name "Drive" ;
+            lv2:symbol "_51_wavefold_folding_drive" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
@@ -570,7 +579,7 @@
             lv2:maximum 20 ;
             lv2:minimum 1 ;
             lv2:name "Folding Min" ;
-            lv2:symbol "_51_wavefold_folding_minimum" ],
+            lv2:symbol "_52_wavefold_folding_minimum" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
@@ -579,7 +588,7 @@
             lv2:maximum 20 ;
             lv2:minimum 1 ;
             lv2:name "Folding Max" ;
-            lv2:symbol "_52_wavefold_folding_maximum" ],
+            lv2:symbol "_53_wavefold_folding_maximum" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
@@ -588,7 +597,7 @@
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "Folding Exponent" ;
-            lv2:symbol "_53_wavefold_folding_exponent" ],
+            lv2:symbol "_54_wavefold_folding_exponent" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
@@ -597,84 +606,12 @@
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Folding Modulation" ;
-            lv2:symbol "_54_wavefold_folding_mod" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
-            lv2:default 1 ;
-            lv2:index 28 ;
-            lv2:maximum 10 ;
-            lv2:minimum 0 ;
-            lv2:name "Stauration Min" ;
-            lv2:symbol "_55_wavefold_saturation_minimum" ],
+            lv2:symbol "_55_wavefold_folding_mod" ],
         [ a lv2:AudioPort,
                 lv2:OutputPort ;
             lv2:index 2 ;
             lv2:name "Audio Output 1" ;
             lv2:symbol "lv2_audio_out_1" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
-            lv2:default 10 ;
-            lv2:index 29 ;
-            lv2:maximum 10 ;
-            lv2:minimum 0 ;
-            lv2:name "Saturation Max" ;
-            lv2:symbol "_56_wavefold_saturation_maximum" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
-            lv2:default 2 ;
-            lv2:index 30 ;
-            lv2:maximum 4 ;
-            lv2:minimum 0.25 ;
-            lv2:name "Saturation Mod Exponent" ;
-            lv2:symbol "_57_wavefold_saturation_exponent" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
-            lv2:default 0 ;
-            lv2:index 31 ;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Saturation Modulation" ;
-            lv2:symbol "_58_wavefold_saturation_mod" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
-            lv2:default 0 ;
-            lv2:index 32 ;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Depth Min" ;
-            lv2:symbol "_59_wavefold_depth_minimum" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
-            lv2:default 100 ;
-            lv2:index 33 ;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Depth Max" ;
-            lv2:symbol "_5a_wavefold_depth_maximum" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
-            lv2:default 2 ;
-            lv2:index 34 ;
-            lv2:maximum 4 ;
-            lv2:minimum 0.25 ;
-            lv2:name "Depth Mod Exponent" ;
-            lv2:symbol "_5b_wavefold_depth_exponent" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
-            lv2:default 0 ;
-            lv2:index 35 ;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Depth Modulation" ;
-            lv2:symbol "_5c_wavefold_depth_mod" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#22_distortion_group> ;
