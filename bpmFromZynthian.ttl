@@ -347,6 +347,7 @@
             lv2:index 112 ;
             lv2:maximum 8 ;
             lv2:minimum 1 ;
+            lv2:portProperty lv2:integer;
             lv2:name "Ping Delay" ;
             lv2:symbol "_ia_pingpong_ping" ],
         [ a lv2:ControlPort,
@@ -356,6 +357,7 @@
             lv2:index 113 ;
             lv2:maximum 8 ;
             lv2:minimum 1 ;
+            lv2:portProperty lv2:integer;
             lv2:name "Pong Delay" ;
             lv2:symbol "_ib_pingpong_pong" ],
         [ a lv2:ControlPort,
@@ -420,6 +422,7 @@
             lv2:index 12 ;
             lv2:maximum 32 ;
             lv2:minimum 1 ;
+            lv2:portProperty lv2:integer;
             lv2:name "Length" ;
             lv2:symbol "_21_buildup_length" ],
         [ a lv2:ControlPort,
