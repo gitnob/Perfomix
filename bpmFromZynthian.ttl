@@ -100,10 +100,10 @@
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
-            lv2:default 4.0 ;
+            lv2:default 4.2 ;
             lv2:index 92 ;
-            lv2:maximum 11.5 ;
-            lv2:minimum 0.1 ;
+            lv2:maximum 10.0 ;
+            lv2:minimum 0.0 ;
             lv2:name "Freq" ;
             lv2:symbol "_g1_flanger_freq_max" ],
         [ a lv2:ControlPort,
@@ -163,9 +163,9 @@
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#46_phaser_group> ;
-            lv2:default 4.0 ;
+            lv2:default 4.3 ;
             lv2:index 99 ;
-            lv2:maximum 15.5 ;
+            lv2:maximum 10.0 ;
             lv2:minimum 0.1 ;
             lv2:name "Freq" ;
             lv2:symbol "_h1_phaser_freq" ],
