@@ -1338,7 +1338,7 @@
 #X obj 1186 133 r _66_distort_bias_maximum @hv_param 0 0.1 0.1;
 #X obj 1186 196 r _67_distort_bias_exponent @hv_param 0.25 4 2;
 #X obj 1186 259 r _68_distort_bias_mod @hv_param 0 100 0;
-#X obj 41 496 hv.compressor2~ 80 1.8;
+#X obj 41 496 hv.compressor2~ 80 4;
 #X connect 0 0 4 0;
 #X connect 0 0 22 0;
 #X connect 1 0 5 0;
@@ -1463,7 +1463,7 @@
 #X obj 845 645 r _23_buildup_amplitude @hv_param 0 100 100;
 #X obj 40 458 r _10_looper_onoff @hv_param 0 1 1 bool;
 #X obj 39 803 r _30_sources_onoff @hv_param 0 1 0 bool;
-#N canvas 0 50 450 300 ampmod_chain 1;
+#N canvas 0 50 450 300 ampmod_chain 0;
 #X obj 75 49 inlet~ audio_l;
 #X obj 173 49 inlet~ audio_r;
 #X obj 67 939 outlet~ audio_l;
@@ -2232,7 +2232,7 @@
 #X connect 6 0 5 0;
 #X connect 6 1 5 1;
 #X restore 1599 587 pd ampmod_chain;
-#N canvas 0 50 450 300 filter_chain 1;
+#N canvas 0 50 450 300 filter_chain 0;
 #X obj 59 75 inlet~ audio_l;
 #X obj 157 75 inlet~ audio_r;
 #N canvas 0 50 450 300 bp2 0;
