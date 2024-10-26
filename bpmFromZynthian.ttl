@@ -103,7 +103,8 @@
             lv2:default 14.0 ;
             lv2:index 92 ;
             lv2:maximum 20.0 ;
-            lv2:minimum 0.0 ;
+            lv2:minimum 0.01 ;
+            lv2:portProperty lv:float ;
             lv2:name "Freq" ;
             lv2:symbol "_g1_flanger_freq_max" ],
         [ a lv2:ControlPort,
@@ -166,7 +167,7 @@
             lv2:default 4.0 ;
             lv2:index 99 ;
             lv2:maximum 20.0 ;
-            lv2:minimum 0.0 ;
+            lv2:minimum 0.01 ;
             lv2:name "Freq" ;
             lv2:symbol "_h1_phaser_freq" ],
         [ a lv2:ControlPort,
