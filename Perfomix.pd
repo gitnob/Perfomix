@@ -785,12 +785,12 @@
 #X obj 1641 485 +~;
 #X obj 1599 783 +~;
 #X obj 1656 783 +~;
-#N canvas 0 50 450 300 delay_chain 0;
+#N canvas 0 50 450 300 delay_chain 1;
 #X obj 89 90 inlet~ left;
 #X obj 165 90 inlet~ right;
 #X obj 89 778 outlet~ left;
 #X obj 173 778 outlet~ left;
-#N canvas 0 50 450 300 pingpong 0;
+#N canvas 0 50 450 300 pingpong 1;
 #X obj 633 762 / 1;
 #X obj 589 621 change;
 #X obj 589 718 swap 937.5;
@@ -867,7 +867,7 @@
 #X text 308 276 937.5 / 40 bpm *2^3 * 2 * 8 = 3000;
 #X obj 329 72 r \$0-timemod_start;
 #X msg 1199 553 3;
-#X obj 474 79 tgl 25 0 empty empty empty 17 7 0 10 #e4e4e4 #4d4d4d #373737 0 1;
+#X obj 474 101 tgl 25 0 empty empty empty 17 7 0 10 #e4e4e4 #4d4d4d #373737 0 1;
 #X obj 563 79 loadbang;
 #X msg 526 79 1;
 #X obj 329 117 spigot;
@@ -1009,7 +1009,7 @@
 #X connect 107 0 13 0;
 #X connect 108 0 53 0;
 #X connect 109 0 57 0;
-#X connect 110 0 78 0;
+#X connect 110 0 76 0;
 #X restore 89 537 pd pingpong;
 #X connect 0 0 4 0;
 #X connect 1 0 4 1;
