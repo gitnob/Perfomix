@@ -480,16 +480,6 @@
             lv2:symbol "_23_buildup_amplitude" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#11_pink_noise_group> ;
-            lv2:default 0 ;
-            lv2:index 15 ;
-            lv2:maximum 1 ;
-            lv2:minimum 0 ;
-            lv2:name "to FX chain" ;
-            lv2:portProperty lv2:toggled ;
-            lv2:symbol "_46_p_noise_FX_onoff" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#10_sources_group> ;
             lv2:default 0 ;
             lv2:index 16 ;
@@ -556,6 +546,16 @@
             lv2:minimum 0.5 ;
             lv2:name "Filter Q" ;
             lv2:symbol "_45_p_noise_q" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#11_pink_noise_group> ;
+            lv2:default 0 ;
+            lv2:index 15 ;
+            lv2:maximum 1 ;
+            lv2:minimum 0 ;
+            lv2:name "to FX chain" ;
+            lv2:portProperty lv2:toggled ;
+            lv2:symbol "_46_p_noise_FX_onoff" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
