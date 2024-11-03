@@ -1314,7 +1314,7 @@
 #X connect 73 0 0 0;
 #X connect 74 0 8 0;
 #X restore 83 315 pd stutter;
-#N canvas 0 50 450 300 stereo_switcher 1;
+#N canvas 0 50 450 300 stereo_switcher 0;
 #X floatatom 406 299 5 0 0 0 - - - 12;
 #X obj 384 262 mod 128;
 #X obj 435 144 r \$0-bang_counter;
@@ -1555,7 +1555,7 @@
 #X connect 56 0 54 0;
 #X connect 57 0 5 0;
 #X restore 69 468 pd stereo_switcher;
-#N canvas 0 50 450 300 stereostutter 1;
+#N canvas 0 50 450 300 stereostutter 0;
 #X floatatom 347 329 5 0 0 0 - - - 12;
 #X obj 347 362 select 0;
 #X obj 347 294 mod 128;
@@ -1737,6 +1737,7 @@
 #X obj 347 252 + 1;
 #X obj 398 198 t b;
 #X obj 284 115 r \$0-crossfader_on_bang;
+#X obj 297 278 t f f;
 #X connect 0 0 1 0;
 #X connect 1 0 41 0;
 #X connect 2 0 0 0;
@@ -1805,12 +1806,14 @@
 #X connect 57 0 49 1;
 #X connect 58 0 55 0;
 #X connect 59 0 64 0;
-#X connect 60 0 2 0;
+#X connect 60 0 66 0;
 #X connect 61 0 60 0;
 #X connect 62 0 63 0;
 #X connect 63 0 2 0;
 #X connect 64 0 62 0;
 #X connect 65 0 60 0;
+#X connect 66 0 2 0;
+#X connect 66 1 41 0;
 #X restore 78 384 pd stereostutter;
 #X connect 0 0 4 0;
 #X connect 1 0 4 1;
