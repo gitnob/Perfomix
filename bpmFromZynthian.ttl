@@ -95,7 +95,7 @@
             lv2:index 90 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
-            lv2:name "Depth" ;
+            lv2:name "Wet/Dry" ;
             lv2:symbol "_g0_filter_amount_flanger" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -158,7 +158,7 @@
             lv2:index 97 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
-            lv2:name "Depth" ;
+            lv2:name "Wet/Dry" ;
             lv2:symbol "_h0_filter_amount_phaser" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -195,6 +195,7 @@
             lv2:index 100 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
+            lv2:portProperty lv2:toggled ;
             lv2:name "Mod Inversion" ;
             lv2:symbol "_h3_phaser_mod_inv" ],
         [ a lv2:ControlPort,
@@ -204,7 +205,7 @@
             lv2:index 101 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
-            lv2:name "Depth Min" ;
+            lv2:name "Wet/Dry Min" ;
             lv2:symbol "_i0_pingpong_amount_min" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -213,7 +214,7 @@
             lv2:index 102 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
-            lv2:name "Depth Max" ;
+            lv2:name "Wet/Dry Max" ;
             lv2:symbol "_i1_pingpong_amount_max" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -222,7 +223,7 @@
             lv2:index 103 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
-            lv2:name "Depth Exponent" ;
+            lv2:name "Wet/Dry Curve" ;
             lv2:symbol "_i2_pingpong_amount_exponent" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -231,7 +232,7 @@
             lv2:index 104 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
-            lv2:name "Depth Modulation" ;
+            lv2:name "Wet/Dry Modulation" ;
             lv2:symbol "_i3_pingpong_amount_mod" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -258,7 +259,7 @@
             lv2:index 107 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
-            lv2:name "Feedback Exponent" ;
+            lv2:name "Feedback Curve" ;
             lv2:symbol "_i6_pingpong_feedback_exponent" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -377,7 +378,7 @@
             lv2:index 114 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
-            lv2:name "Amount" ;
+            lv2:name "Wet/Dry" ;
             lv2:symbol "_k0_reverb_amount" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -386,7 +387,7 @@
             lv2:index 115 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
-            lv2:name "Amount Modulation" ;
+            lv2:name "Wet/Dry Modulation" ;
             lv2:symbol "_k1_reverb_amount_mod" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -517,7 +518,7 @@
             lv2:index 18 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
-            lv2:name "Freq Mod Exponent" ;
+            lv2:name "Freq Mod Curve" ;
             lv2:symbol "_43_p_noise_raise_exponent" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -590,7 +591,7 @@
             lv2:index 26 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
-            lv2:name "Folding Exponent" ;
+            lv2:name "Folding Curve" ;
             lv2:symbol "_54_wavefold_folding_exponent" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -613,7 +614,7 @@
             lv2:index 28 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
-            lv2:name "Amount" ;
+            lv2:name "Wet/Dry" ;
             lv2:symbol "_60_distort_amount" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -645,7 +646,7 @@
             lv2:index 31 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
-            lv2:name "Knee Mod Exponent" ;
+            lv2:name "Knee Mod Curve" ;
             lv2:symbol "_63_distort_knee_exponent" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -681,7 +682,7 @@
             lv2:index 35 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
-            lv2:name "Bias Mod Exponent" ;
+            lv2:name "Bias Mod Curve" ;
             lv2:symbol "_67_distort_bias_exponent" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -699,7 +700,7 @@
             lv2:index 37 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
-            lv2:name "Amount" ;
+            lv2:name "Wet/Dry" ;
             lv2:symbol "_70_freqshift_amount" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -726,7 +727,7 @@
             lv2:index 40 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
-            lv2:name "FreqShift Mod Exponent" ;
+            lv2:name "FreqShift Mod Curve" ;
             lv2:symbol "_73_freqshift_exponent" ],
         [ a atom:AtomPort,
                 lv2:InputPort ;
@@ -752,7 +753,7 @@
             lv2:index 42 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
-            lv2:name "Amount" ;
+            lv2:name "Wet/Dry" ;
             lv2:symbol "_90_st_stutter_amount" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -831,7 +832,7 @@
             lv2:index 46 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
-            lv2:name "Amount" ;
+            lv2:name "Wet/Dry" ;
             lv2:symbol "_a0_stereo_switch_amount" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -910,7 +911,7 @@
             lv2:index 49 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
-            lv2:name "Amount" ;
+            lv2:name "Wet/Dry" ;
             lv2:symbol "_b0_stutter_amount" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -993,12 +994,12 @@
             lv2:symbol "_b4_stutter_interval_modulation" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#41_lp_group> ;
+            pg:group <lv2://nobisoft.de/Perfomix#40_filter_group> ;
             lv2:default 0 ;
             lv2:index 54 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
-            lv2:name "Depth" ;
+            lv2:name "LP" ;
             lv2:symbol "_c0_filter_amount_lp" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -1025,7 +1026,7 @@
             lv2:index 57 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
-            lv2:name "Freq Mod Exponent" ;
+            lv2:name "Freq Mod Curve" ;
             lv2:symbol "_c3_lp_freq_exponent" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -1071,7 +1072,7 @@
             lv2:index 61 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
-            lv2:name "Q Mod Exponent" ;
+            lv2:name "Q Mod Curve" ;
             lv2:symbol "_c7_lp_q_exponent" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -1084,12 +1085,12 @@
             lv2:symbol "_c8_lp_q_mod" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#42_hp_group> ;
+            pg:group <lv2://nobisoft.de/Perfomix#40_filter_group> ;
             lv2:default 0 ;
             lv2:index 63 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
-            lv2:name "Depth" ;
+            lv2:name "HP" ;
             lv2:symbol "_d0_filter_amount_hp" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -1116,7 +1117,7 @@
             lv2:index 66 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
-            lv2:name "Freq Mod Exponent" ;
+            lv2:name "Freq Mod Curve" ;
             lv2:symbol "_d3_hp_freq_exponent" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -1163,7 +1164,7 @@
             lv2:index 70 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
-            lv2:name "Q Mod Exponent" ;
+            lv2:name "Q Mod Curve" ;
             lv2:symbol "_d7_hp_q_exponent" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -1176,12 +1177,12 @@
             lv2:symbol "_d8_hp_q_mod" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#43_bp_group> ;
+            pg:group <lv2://nobisoft.de/Perfomix#40_filter_group> ;
             lv2:default 0 ;
             lv2:index 72 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
-            lv2:name "Depth" ;
+            lv2:name "BP" ;
             lv2:symbol "_e0_filter_amount_bp" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -1208,7 +1209,7 @@
             lv2:index 75 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
-            lv2:name "Freq Mod Exponent" ;
+            lv2:name "Freq Mod Curve" ;
             lv2:symbol "_e3_bp_freq_exponent" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -1254,7 +1255,7 @@
             lv2:index 79 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
-            lv2:name "Q Mod Exponent" ;
+            lv2:name "Q Mod Curve" ;
             lv2:symbol "_e7_bp_q_exponent" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -1267,12 +1268,12 @@
             lv2:symbol "_e8_bp_q_mod" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#44_notch_group> ;
+            pg:group <lv2://nobisoft.de/Perfomix#40_filter_group> ;
             lv2:default 0 ;
             lv2:index 81 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
-            lv2:name "Depth" ;
+            lv2:name "Notch" ;
             lv2:symbol "_f0_filter_amount_notch" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -1299,7 +1300,7 @@
             lv2:index 84 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
-            lv2:name "Freq Mod Exponent" ;
+            lv2:name "Freq Mod Curve" ;
             lv2:symbol "_f3_notch_freq_exponent" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
@@ -1335,7 +1336,7 @@
             lv2:index 88 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
-            lv2:name "Q Mod Exponent" ;
+            lv2:name "Q Mod Curve" ;
             lv2:symbol "_f7_notch_q_exponent" ] ;
     lv2:requiredFeature opts:options,
         <http://lv2plug.in/ns/ext/urid#map> ;
@@ -1396,6 +1397,10 @@
     lv2:name "Distortion" ;
     lv2:symbol "22_distortion_group" .
 
+<lv2://nobisoft.de/Perfomix#40_filter_group> a pg:InputGroup ;
+    lv2:name "Filter Wet/Dry" ;
+    lv2:symbol "40_filter_group" .
+
 <lv2://nobisoft.de/Perfomix#41_lp_group> a pg:InputGroup ;
     lv2:name "Low Pass" ;
     lv2:symbol "41_lp_group" .
@@ -1409,7 +1414,7 @@
     lv2:symbol "43_bp_group" .
 
 <lv2://nobisoft.de/Perfomix#44_notch_group> a pg:InputGroup ;
-    lv2:name "Notch Filter" ;
+    lv2:name "Notch" ;
     lv2:symbol "44_notch_group" .
 
 <lv2://nobisoft.de/Perfomix#23_wavefold_group> a pg:InputGroup ;
