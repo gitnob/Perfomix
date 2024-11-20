@@ -1029,12 +1029,12 @@
 #X obj 567 645 r _22_buildup_retrigger @hv_param 0 1 1 bool;
 #X obj 845 645 r _23_buildup_amplitude @hv_param 0 100 100;
 #X obj 40 458 r _10_looper_onoff @hv_param 0 1 1 bool;
-#N canvas 0 50 450 300 ampmod_chain 1;
+#N canvas 0 50 450 300 ampmod_chain 0;
 #X obj 75 49 inlet~ audio_l;
 #X obj 173 49 inlet~ audio_r;
 #X obj 67 939 outlet~ audio_l;
 #X obj 173 939 outlet~ audio_r;
-#N canvas 0 50 450 300 stutter 1;
+#N canvas 0 50 450 300 stutter 0;
 #N canvas 0 50 450 300 beat_stutter_chooser 0;
 #X obj 319 38 loadbang;
 #X obj 71 38 inlet fader_in;
@@ -1824,7 +1824,7 @@
 #X connect 6 0 5 0;
 #X connect 6 1 5 1;
 #X restore 1599 587 pd ampmod_chain;
-#N canvas 0 50 450 300 filter_chain 0;
+#N canvas 0 50 450 300 filter_chain 1;
 #X obj 59 75 inlet~ audio_l;
 #X obj 157 75 inlet~ audio_r;
 #N canvas 0 50 450 300 bp2 0;
@@ -2274,7 +2274,7 @@
 #X connect 70 0 26 4;
 #X connect 71 0 40 4;
 #X restore 59 429 pd notch;
-#N canvas 0 50 450 300 lp2 0;
+#N canvas 0 50 450 300 lp2 1;
 #X obj 442 606 + 1;
 #X obj 47 50 inlet~ audio_l, f 13;
 #X obj 145 50 inlet~ audio_r, f 13;
@@ -2308,7 +2308,7 @@
 #X obj 390 226 r _C4_lp_freq_mod @hv_param 0 100 0;
 #X obj 390 163 r _C3_lp_freq_exponent @hv_param 0.25 4 2;
 #X obj 264 459 s \$0-lp-freq;
-#X obj 107 501 r \$0-lp-freq;
+#X obj 107 415 r \$0-lp-freq;
 #X obj 442 499 f;
 #X obj 817 258 hsl 128 17 0 100 0 0 empty empty empty -2 -8 0 10 #e4e4e4 #4d4d4d #373737 0 1;
 #X obj 995 258 loadbang;
@@ -2347,6 +2347,8 @@
 #X obj 400 351 f;
 #X obj 547 346 r \$0-bang_counter;
 #X obj 547 372 t b;
+#X obj 107 497 line;
+#X msg 107 459 \$1 20;
 #X connect 0 0 13 0;
 #X connect 1 0 7 0;
 #X connect 1 0 65 0;
@@ -2380,7 +2382,7 @@
 #X connect 29 0 32 0;
 #X connect 30 0 18 0;
 #X connect 31 0 26 0;
-#X connect 33 0 16 0;
+#X connect 33 0 73 0;
 #X connect 34 0 7 2;
 #X connect 34 0 8 2;
 #X connect 34 0 17 0;
@@ -2423,6 +2425,8 @@
 #X connect 70 0 71 0;
 #X connect 71 0 69 0;
 #X connect 71 0 68 0;
+#X connect 72 0 16 0;
+#X connect 73 0 72 0;
 #X restore 59 274 pd lp2;
 #N canvas 0 50 450 300 flanger 0;
 #X obj 412 117 hsl 128 11 0 20 0 0 empty empty empty -2 -8 0 10 #e4e4e4 #4d4d4d #373737 0 1;
