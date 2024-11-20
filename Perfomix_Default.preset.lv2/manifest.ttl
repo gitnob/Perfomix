@@ -1,0 +1,72 @@
+@prefix atom: <http://lv2plug.in/ns/ext/atom#> .
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix state: <http://lv2plug.in/ns/ext/state#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<Default>
+	lv2:appliesTo <https://nobisoft.de/Perfomix> ;
+	a pset:Bank ;
+	rdfs:label "Default" .
+
+<DEFAULT_NO_FX.ttl>
+	lv2:appliesTo <lv2://nobisoft.de/Perfomix> ;
+	a pset:Preset ;
+	rdfs:seeAlso <DEFAULT_NO_FX.ttl> .
+
+<DEFAULT_NO_FX_LOOPER.ttl>
+	lv2:appliesTo <lv2://nobisoft.de/Perfomix> ;
+	a pset:Preset ;
+	rdfs:seeAlso <DEFAULT_NO_FX_LOOPER.ttl> .
+
+<high_pass_reverb.ttl>
+	lv2:appliesTo <lv2://nobisoft.de/Perfomix> ;
+	a pset:Preset ;
+	rdfs:seeAlso <high_pass_reverb.ttl> .
+
+<high_pass_transition.ttl>
+	lv2:appliesTo <lv2://nobisoft.de/Perfomix> ;
+	a pset:Preset ;
+	rdfs:seeAlso <high_pass_transition.ttl> .
+
+<pitch_it_up.ttl>
+	lv2:appliesTo <lv2://nobisoft.de/Perfomix> ;
+	a pset:Preset ;
+	rdfs:seeAlso <pitch_it_up.ttl> .
+
+<pitch_it_up_noise_rvb.ttl>
+	lv2:appliesTo <lv2://nobisoft.de/Perfomix> ;
+	a pset:Preset ;
+	rdfs:seeAlso <pitch_it_up_noise_rvb.ttl> .
+
+<pitch_it_up_w_noise.ttl>
+	lv2:appliesTo <lv2://nobisoft.de/Perfomix> ;
+	a pset:Preset ;
+	rdfs:seeAlso <pitch_it_up_w_noise.ttl> .
+
+<raised_stutter_lp.ttl>
+	lv2:appliesTo <lv2://nobisoft.de/Perfomix> ;
+	a pset:Preset ;
+	rdfs:seeAlso <raised_stutter_lp.ttl> .
+
+<raiser_low_pass.ttl>
+	lv2:appliesTo <lv2://nobisoft.de/Perfomix> ;
+	a pset:Preset ;
+	rdfs:seeAlso <raiser_low_pass.ttl> .
+
+<raiser_saturated_low_pass.ttl>
+	lv2:appliesTo <lv2://nobisoft.de/Perfomix> ;
+	a pset:Preset ;
+	rdfs:seeAlso <raiser_saturated_low_pass.ttl> .
+
+<stutter_noise_rvb.ttl>
+	lv2:appliesTo <lv2://nobisoft.de/Perfomix> ;
+	a pset:Preset ;
+	rdfs:seeAlso <stutter_noise_rvb.ttl> .
+
+<stutter_noise_rvb_stereo.ttl>
+	lv2:appliesTo <lv2://nobisoft.de/Perfomix> ;
+	a pset:Preset ;
+	rdfs:seeAlso <stutter_noise_rvb_stereo.ttl> .

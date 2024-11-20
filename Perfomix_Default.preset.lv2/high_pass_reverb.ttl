@@ -1,0 +1,368 @@
+@prefix atom: <http://lv2plug.in/ns/ext/atom#> .
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix state: <http://lv2plug.in/ns/ext/state#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<>
+	a pset:Preset ;
+	lv2:appliesTo <lv2://nobisoft.de/Perfomix> ;
+	rdfs:label "high pass reverb" ;
+	pset:bank <base> ;
+	lv2:port [
+		lv2:symbol "_00_cross_fader" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_01_cross_trigger" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_02_bpm_custom" ;
+		pset:value 137.01889038
+	] , [
+		lv2:symbol "_10_looper_onoff" ;
+		pset:value 1.0
+	] , [
+		lv2:symbol "_11_looper_beat_part" ;
+		pset:value 6.0
+	] , [
+		lv2:symbol "_12_looper_beat_triplet" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_20_buildup_style" ;
+		pset:value 1.03499997
+	] , [
+		lv2:symbol "_21_buildup_length" ;
+		pset:value 16.0
+	] , [
+		lv2:symbol "_22_buildup_retrigger" ;
+		pset:value 1.0
+	] , [
+		lv2:symbol "_23_buildup_amplitude" ;
+		pset:value 100.0
+	] , [
+		lv2:symbol "_31_buildup_sources_amount" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_40_p_noise_amount" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_41_p_noise_minimum" ;
+		pset:value 30.0
+	] , [
+		lv2:symbol "_42_p_noise_maximum" ;
+		pset:value 300.0
+	] , [
+		lv2:symbol "_43_p_noise_raise_exponent" ;
+		pset:value 2.0
+	] , [
+		lv2:symbol "_44_p_noise_max_freq_mod" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_45_p_noise_q" ;
+		pset:value 3.0
+	] , [
+		lv2:symbol "_46_p_noise_FX_onoff" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_50_wavefold_amount" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_51_wavefold_folding_drive" ;
+		pset:value 1.0
+	] , [
+		lv2:symbol "_52_wavefold_folding_minimum" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_53_wavefold_folding_maximum" ;
+		pset:value 100.0
+	] , [
+		lv2:symbol "_54_wavefold_folding_exponent" ;
+		pset:value 2.0
+	] , [
+		lv2:symbol "_55_wavefold_folding_mod" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_60_distort_amount" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_61_distort_knee_minimum" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_62_distort_knee_maximum" ;
+		pset:value 18.0
+	] , [
+		lv2:symbol "_63_distort_knee_exponent" ;
+		pset:value 2.0
+	] , [
+		lv2:symbol "_64_distort_knee_mod" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_65_distort_bias_minimum" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_66_distort_bias_maximum" ;
+		pset:value 0.1
+	] , [
+		lv2:symbol "_67_distort_bias_exponent" ;
+		pset:value 2.0
+	] , [
+		lv2:symbol "_68_distort_bias_mod" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_70_freqshift_amount" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_71_freqshift_minimum" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_72_freqshift_maximum" ;
+		pset:value 110.0
+	] , [
+		lv2:symbol "_73_freqshift_exponent" ;
+		pset:value 2.0
+	] , [
+		lv2:symbol "_74_freqshift_mod" ;
+		pset:value 100.0
+	] , [
+		lv2:symbol "_90_st_stutter_amount" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_91_st_stutter_interval" ;
+		pset:value 6.0
+	] , [
+		lv2:symbol "_92_st_stutter_hardness" ;
+		pset:value 50.0
+	] , [
+		lv2:symbol "_93_st_stutter_interval_modulation" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_a0_stereo_switch_amount" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_a1_stereo_switch_interval" ;
+		pset:value 6.0
+	] , [
+		lv2:symbol "_a2_stereo_switch_interval_modulation" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_b0_stutter_amount" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_b1_stutter_interval" ;
+		pset:value 6.0
+	] , [
+		lv2:symbol "_b2_stutter_length" ;
+		pset:value 50.0
+	] , [
+		lv2:symbol "_b3_stutter_hardness" ;
+		pset:value 50.0
+	] , [
+		lv2:symbol "_b4_stutter_interval_modulation" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_c0_filter_amount_lp" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_c1_lp_freq_min" ;
+		pset:value 139.80000305
+	] , [
+		lv2:symbol "_c2_lp_freq_max" ;
+		pset:value 1996.19995117
+	] , [
+		lv2:symbol "_c3_lp_freq_exponent" ;
+		pset:value 2.0
+	] , [
+		lv2:symbol "_c4_lp_freq_mod" ;
+		pset:value 100.0
+	] , [
+		lv2:symbol "_c5_lp_q_min" ;
+		pset:value 1.17550004
+	] , [
+		lv2:symbol "_c6_lp_q_max" ;
+		pset:value 3.0
+	] , [
+		lv2:symbol "_c7_lp_q_exponent" ;
+		pset:value 2.0
+	] , [
+		lv2:symbol "_c8_lp_q_mod" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_d0_filter_amount_hp" ;
+		pset:value 100.0
+	] , [
+		lv2:symbol "_d1_hp_freq_min" ;
+		pset:value 40.0
+	] , [
+		lv2:symbol "_d2_hp_freq_max" ;
+		pset:value 738.59997559
+	] , [
+		lv2:symbol "_d3_hp_freq_exponent" ;
+		pset:value 4.0
+	] , [
+		lv2:symbol "_d4_hp_freq_mod" ;
+		pset:value 100.0
+	] , [
+		lv2:symbol "_d5_hp_q_min" ;
+		pset:value 1.64349997
+	] , [
+		lv2:symbol "_d6_hp_q_max" ;
+		pset:value 4.0
+	] , [
+		lv2:symbol "_d7_hp_q_exponent" ;
+		pset:value 2.0
+	] , [
+		lv2:symbol "_d8_hp_q_mod" ;
+		pset:value 100.0
+	] , [
+		lv2:symbol "_e0_filter_amount_bp" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_e1_bp_freq_min" ;
+		pset:value 3000.0
+	] , [
+		lv2:symbol "_e2_bp_freq_max" ;
+		pset:value 10000.0
+	] , [
+		lv2:symbol "_e3_bp_freq_exponent" ;
+		pset:value 2.0
+	] , [
+		lv2:symbol "_e4_bp_freq_mod" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_e5_bp_q_min" ;
+		pset:value 1.0
+	] , [
+		lv2:symbol "_e6_bp_q_max" ;
+		pset:value 4.0
+	] , [
+		lv2:symbol "_e7_bp_q_exponent" ;
+		pset:value 2.0
+	] , [
+		lv2:symbol "_e8_bp_q_mod" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_f0_filter_amount_notch" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_f1_notch_freq_min" ;
+		pset:value 200.0
+	] , [
+		lv2:symbol "_f2_notch_freq_max" ;
+		pset:value 2000.0
+	] , [
+		lv2:symbol "_f3_notch_freq_exponent" ;
+		pset:value 2.0
+	] , [
+		lv2:symbol "_f4_notch_freq_mod" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_f5_notch_q_min" ;
+		pset:value 0.5
+	] , [
+		lv2:symbol "_f6_notch_q_max" ;
+		pset:value 3.0
+	] , [
+		lv2:symbol "_f7_notch_q_exponent" ;
+		pset:value 2.0
+	] , [
+		lv2:symbol "_f8_notch_q_mod" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_g0_filter_amount_flanger" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_g1_flanger_freq_max" ;
+		pset:value 14.0
+	] , [
+		lv2:symbol "_g2_flanger_freq_mod" ;
+		pset:value 100.0
+	] , [
+		lv2:symbol "_g3_flanger_fback_max" ;
+		pset:value 50.0
+	] , [
+		lv2:symbol "_g4_flanger_fback_mod" ;
+		pset:value 100.0
+	] , [
+		lv2:symbol "_g5_flanger_intensity_max" ;
+		pset:value 50.0
+	] , [
+		lv2:symbol "_g6_flanger_intensity_mod" ;
+		pset:value 100.0
+	] , [
+		lv2:symbol "_h0_filter_amount_phaser" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_h1_phaser_freq" ;
+		pset:value 4.0
+	] , [
+		lv2:symbol "_h2_phaser_freq_mod" ;
+		pset:value 10.0
+	] , [
+		lv2:symbol "_h3_phaser_mod_inv" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_i0_pingpong_amount_min" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_i1_pingpong_amount_max" ;
+		pset:value 100.0
+	] , [
+		lv2:symbol "_i2_pingpong_amount_exponent" ;
+		pset:value 0.5
+	] , [
+		lv2:symbol "_i3_pingpong_amount_mod" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_i4_pingpong_feedback_min" ;
+		pset:value 70.0
+	] , [
+		lv2:symbol "_i5_pingpong_feedback_max" ;
+		pset:value 100.0
+	] , [
+		lv2:symbol "_i6_pingpong_feedback_exponent" ;
+		pset:value 0.5
+	] , [
+		lv2:symbol "_i7_pingpong_feedback_mod" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_i8_pingpong_delay_triplet" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_i9_pingpong_delay_synced_partial" ;
+		pset:value 3.0
+	] , [
+		lv2:symbol "_ia_pingpong_ping" ;
+		pset:value 3.0
+	] , [
+		lv2:symbol "_ib_pingpong_pong" ;
+		pset:value 3.0
+	] , [
+		lv2:symbol "_ic_pingpong_on_buildup_reset" ;
+		pset:value 1.0
+	] , [
+		lv2:symbol "_k0_reverb_amount" ;
+		pset:value 100.0
+	] , [
+		lv2:symbol "_k1_reverb_amount_mod" ;
+		pset:value 100.0
+	] , [
+		lv2:symbol "_k2_reverb_feedback" ;
+		pset:value 71.5
+	] , [
+		lv2:symbol "_k3_reverb_damp" ;
+		pset:value 0.0
+	] , [
+		lv2:symbol "_k4_reverb_lowcut" ;
+		pset:value 5.0
+	] , [
+		lv2:symbol "_k5_reverb_highcut" ;
+		pset:value 5878.82519531
+	] , [
+		lv2:symbol "_k6_reverb_crossfreq" ;
+		pset:value 3750.0
+	] , [
+		lv2:symbol "_k7_reverb_predelay" ;
+		pset:value 0.0
+	] .
