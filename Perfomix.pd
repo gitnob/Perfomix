@@ -2348,7 +2348,7 @@
 #X obj 547 346 r \$0-bang_counter;
 #X obj 547 372 t b;
 #X obj 107 497 line;
-#X msg 107 459 \$1 20;
+#X msg 107 459 \$1 50;
 #X connect 0 0 13 0;
 #X connect 1 0 7 0;
 #X connect 1 0 65 0;
