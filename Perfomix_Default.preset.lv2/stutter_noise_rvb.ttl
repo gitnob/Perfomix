@@ -10,7 +10,6 @@
 	a pset:Preset ;
 	lv2:appliesTo <lv2://nobisoft.de/Perfomix> ;
 	rdfs:label "stutter noise rvb" ;
-	pset:bank <default> ;
 	lv2:port [
 		lv2:symbol "_00_cross_fader" ;
 		pset:value 0.0
