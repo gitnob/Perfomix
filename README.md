@@ -70,12 +70,24 @@ or
 cp -r gen/bin/Perfomix.lv2 $ZYNTHIAN_PLUGINS_DIR/lv2
 ```
 
+At last copy the default presets into zynthian's plugin data presets folder
+```
+cp -r pd/Perfomix/Perfomix_Default.preset.lv2 $ZYNTHIAN_DATA_DIR/presets/lv2/
+```
+
 **Activate Zynthian's virtual python environment again!!**
 ```
 source $ZYNTHIAN_DIR/venv/bin/activate
 ```
 
-Update the engines in webconf and toggle Perfomix. Restart zynthian.
+Update the engines and lv2 presets on the command line with 
+
+```
+regenerate_engines_db.sh
+regenerate_lv2_presets.sh
+```
+
+OR: Update the engines and presets in webconf and toggle Perfomix. Restart zynthian.
 
 
 
