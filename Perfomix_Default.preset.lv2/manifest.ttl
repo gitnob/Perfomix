@@ -7,7 +7,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <PerfomixDefault>
-	lv2:appliesTo <https://nobisoft.de/Perfomix> ;
+	lv2:appliesTo <lv2://nobisoft.de/Perfomix> ;
 	a pset:Bank ;
 	rdfs:label "Default" .
 
