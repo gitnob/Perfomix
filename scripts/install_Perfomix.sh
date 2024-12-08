@@ -86,7 +86,7 @@ fi
 # Copy better ttl parameter file to lv2 directory
 cp $ZYNTHIAN_PLUGINS_SRC_DIR/$PERFOMIX_DIR/Perfomix/*.ttl bin/Perfomix.lv2/
 
-cp -r bin/Perfomix.lv2 $ZYNTHIAN_PLUGINS_DIR 
+cp -r bin/Perfomix.lv2 $ZYNTHIAN_PLUGINS_DIR/lv2/
 cp -r $ZYNTHIAN_PLUGINS_SRC_DIR/$PERFOMIX_DIR/Perfomix/Perfomix_Default.preset.lv2 $ZYNTHIAN_DATA_DIR/presets/lv2/
 
 
