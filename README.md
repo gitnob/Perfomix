@@ -23,14 +23,14 @@ No extra pd libraries are needed, it's hvcc safe.
 The most easiest way is to use plugdata. You can download it from https://plugdata.org/ .
 Load the Perfomix.pd patch and compile as described on their website. This is available for different environments and is preferable for regular users.
 
-# Easy way installing into zynthian's environment
+# Easy way of installing into zynthian's environment
 
 During this process an extra pip library (hvcc) is loaded into the virtual environment of zynthian.
 Install the install_Perfomix.sh script in the zynthian's plugin folder for recipes. Make it executable and run it.
 Use the zynthian terminal (webconf) or a ssh terminal to zynthian.
 
 ```
-cd $ZYNTHIAN_SYS/DIR/scripts/recipes
+cd $ZYNTHIAN_SYS_DIR/scripts/recipes
 wget https://github.com/gitnob/Perfomix/raw/refs/heads/main/scripts/install_Perfomix.sh
 chmod u+x install_Perfomix.sh
 ```
@@ -52,7 +52,7 @@ Reboot zynthian.
 
 **Updating is easy, just run the install_Perfomix.sh script again!**
 
-# Detailed zynthian compilation and installation
+# Detailed zynthian compilation and installation (experts only)
 Because at the moment plugdata does not have a arm64 export mechanism, it is necessary to compile the plugin for the raspberry pi OS on the command line.
 Compilation on the command line involves some basic understanding of directories and text editing. You also need git.
 
@@ -118,7 +118,7 @@ regenerate_lv2_presets.sh
 
 OR: Update the engines and presets in webconf and toggle Perfomix. Restart zynthian.
 
-# Detailed plugin update
+# Detailed plugin update (experts only)
 
 **Deactivate Zynthian's virtual python environment!!**
 ```
