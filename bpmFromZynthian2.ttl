@@ -24,17 +24,17 @@
         lv2:hardRTCapable ;
     lv2:port [ a lv2:AudioPort,
                 lv2:InputPort ;
-            lv2:index 0;
+            lv2:index 0 ;
             lv2:name "Audio Input 1" ;
             lv2:symbol "lv2_audio_in_1" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#02_looper_group> ;
             lv2:default 4 ;
-            lv2:index 10;
+            lv2:index 9 ;
             lv2:maximum 5 ;
             lv2:minimum 0 ;
-            lv2:name "Note Measure" ;
+            lv2:name "Note Divisor" ;
             lv2:portProperty lv2:integer;
             lv2:portProperty lv2:enumeration ;
             lv2:scalePoint [
@@ -61,13 +61,13 @@
                 rdfs:label  "1/2" ;
                 rdf:value 5 ;
             ] ;
-            lv2:symbol "_12_looper_note_measure" ;
+            lv2:symbol "_11_looper_beat_part" ;
             ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#44_notch_group> ;
             lv2:default 0 ;
-            lv2:index 89;
+            lv2:index 88 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Q Modulation" ;
@@ -76,7 +76,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
             lv2:default 0 ;
-            lv2:index 90;
+            lv2:index 89 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Wet/Dry" ;
@@ -85,7 +85,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
             lv2:default 4.2 ;
-            lv2:index 91;
+            lv2:index 90 ;
             lv2:maximum 10.0 ;
             lv2:minimum 0.0 ;
             lv2:name "Freq" ;
@@ -94,7 +94,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
             lv2:default 100 ;
-            lv2:index 92;
+            lv2:index 91 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Freq Modulation" ;
@@ -103,7 +103,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
             lv2:default 50 ;
-            lv2:index 93;
+            lv2:index 92 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Feedback" ;
@@ -112,7 +112,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
             lv2:default 100 ;
-            lv2:index 94;
+            lv2:index 93 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Feedback Modulation" ;
@@ -121,7 +121,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
             lv2:default 50 ;
-            lv2:index 95;
+            lv2:index 94 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Intensity" ;
@@ -130,7 +130,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
             lv2:default 100 ;
-            lv2:index 96;
+            lv2:index 95 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Intensity Modulation" ;
@@ -139,7 +139,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#46_phaser_group> ;
             lv2:default 0 ;
-            lv2:index 97;
+            lv2:index 96 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Wet/Dry" ;
@@ -148,7 +148,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#46_phaser_group> ;
             lv2:default 4.3 ;
-            lv2:index 98;
+            lv2:index 97 ;
             lv2:maximum 10.0 ;
             lv2:minimum 0.1 ;
             lv2:name "Freq" ;
@@ -157,27 +157,17 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#02_looper_group> ;
             lv2:default 0 ;
-            lv2:index 11;
+            lv2:index 10 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
             lv2:name "Triplet division" ;
             lv2:portProperty lv2:toggled ;
-            lv2:symbol "_13_looper_beat_triplet" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#02_looper_group> ;
-            lv2:default 1 ;
-            lv2:index 9;
-            lv2:maximum 16 ;
-            lv2:minimum 1 ;
-            lv2:portProperty lv2:integer;
-            lv2:name "Measure Counter" ;
-            lv2:symbol "_11_looper_measure_counter" ],
+            lv2:symbol "_12_looper_beat_triplet" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#46_phaser_group> ;
             lv2:default 10 ;
-            lv2:index 99;
+            lv2:index 98 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Freq Modulation" ;
@@ -186,7 +176,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#46_phaser_group> ;
             lv2:default 0 ;
-            lv2:index 100;
+            lv2:index 99 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
             lv2:portProperty lv2:toggled ;
@@ -196,7 +186,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
             lv2:default 0 ;
-            lv2:index 101;
+            lv2:index 100 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Wet/Dry Min" ;
@@ -205,7 +195,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
             lv2:default 100 ;
-            lv2:index 102;
+            lv2:index 101 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Wet/Dry Max" ;
@@ -214,7 +204,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
             lv2:default 0.5 ;
-            lv2:index 103;
+            lv2:index 102 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "Wet/Dry Curve" ;
@@ -223,7 +213,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
             lv2:default 0 ;
-            lv2:index 104;
+            lv2:index 103 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Wet/Dry Modulation" ;
@@ -232,7 +222,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
             lv2:default 70 ;
-            lv2:index 105;
+            lv2:index 104 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Feedback Min" ;
@@ -241,7 +231,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
             lv2:default 100 ;
-            lv2:index 106;
+            lv2:index 105 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Feedback Max" ;
@@ -250,7 +240,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
             lv2:default 0.5 ;
-            lv2:index 107;
+            lv2:index 106 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "Feedback Curve" ;
@@ -259,7 +249,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
             lv2:default 0 ;
-            lv2:index 108;
+            lv2:index 107 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Feedback Modulation" ;
@@ -268,7 +258,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#03_buildup_group> ;
             lv2:default 1 ;
-            lv2:index 12;
+            lv2:index 11 ;
             lv2:maximum 3 ;
             lv2:minimum 0 ;
             lv2:name "Style" ;
@@ -295,7 +285,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
             lv2:default 0 ;
-            lv2:index 109;
+            lv2:index 108 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
             lv2:name "Triplett" ;
@@ -305,7 +295,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
             lv2:default 3 ;
-            lv2:index 110;
+            lv2:index 109 ;
             lv2:maximum 5 ;
             lv2:minimum 0 ;
             lv2:name "Division" ;
@@ -339,7 +329,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
             lv2:default 3 ;
-            lv2:index 111;
+            lv2:index 110 ;
             lv2:maximum 8 ;
             lv2:minimum 1 ;
             lv2:portProperty lv2:integer;
@@ -349,7 +339,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
             lv2:default 3 ;
-            lv2:index 112;
+            lv2:index 111 ;
             lv2:maximum 8 ;
             lv2:minimum 1 ;
             lv2:portProperty lv2:integer;
@@ -359,7 +349,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
             lv2:default 1 ;
-            lv2:index 113;
+            lv2:index 112 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
             lv2:name "Reset On Start" ;
@@ -369,7 +359,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
             lv2:default 0 ;
-            lv2:index 114;
+            lv2:index 113 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Wet/Dry" ;
@@ -378,7 +368,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
             lv2:default 0 ;
-            lv2:index 115;
+            lv2:index 114 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Wet/Dry Modulation" ;
@@ -387,7 +377,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
             lv2:default 0 ;
-            lv2:index 116;
+            lv2:index 115 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Feedback" ;
@@ -396,7 +386,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
             lv2:default 60 ;
-            lv2:index 117;
+            lv2:index 116 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Damping" ;
@@ -405,7 +395,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
             lv2:default 5 ;
-            lv2:index 118;
+            lv2:index 117 ;
             lv2:maximum 25000 ;
             lv2:minimum 5 ;
             lv2:name "Low Cut" ;
@@ -414,17 +404,17 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#03_buildup_group> ;
             lv2:default 16 ;
-            lv2:index 13;
+            lv2:index 12 ;
             lv2:maximum 64 ;
             lv2:minimum 1 ;
             lv2:portProperty lv2:integer;
-            lv2:name "1/4 note length" ;
+            lv2:name "Length" ;
             lv2:symbol "_21_buildup_length" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
             lv2:default 24000 ;
-            lv2:index 119;
+            lv2:index 118 ;
             lv2:maximum 25000 ;
             lv2:minimum 5 ;
             lv2:name "High Cut" ;
@@ -433,7 +423,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
             lv2:default 3000 ;
-            lv2:index 120;
+            lv2:index 119 ;
             lv2:maximum 25000 ;
             lv2:minimum 0 ;
             lv2:name "Cross Freq" ;
@@ -442,14 +432,14 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
             lv2:default 0 ;
-            lv2:index 121;
+            lv2:index 120 ;
             lv2:maximum 2800 ;
             lv2:minimum 0 ;
             lv2:name "Predelay" ;
             lv2:symbol "_k7_reverb_predelay" ],
         [ a lv2:ControlPort,
                 lv2:OutputPort ;
-            lv2:index 122;
+            lv2:index 121 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
             lv2:name "buildup position" ;
@@ -458,7 +448,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#00_mixer_group> ;
             lv2:default 100 ;
-            lv2:index 14;
+            lv2:index 13 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Manual FX" ;
@@ -467,7 +457,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#11_pink_noise_group> ;
             lv2:default 0 ;
-            lv2:index 15;
+            lv2:index 14 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Volume" ;
@@ -476,21 +466,21 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#11_pink_noise_group> ;
             lv2:default 30 ;
-            lv2:index 16;
+            lv2:index 15 ;
             lv2:maximum 10000 ;
             lv2:minimum 20 ;
             lv2:name "Freq Min" ;
             lv2:symbol "_41_p_noise_minimum" ],
         [ a lv2:AudioPort,
                 lv2:InputPort ;
-            lv2:index 1;
+            lv2:index 1 ;
             lv2:name "Audio Input 2" ;
             lv2:symbol "lv2_audio_in_2" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#11_pink_noise_group> ;
             lv2:default 300 ;
-            lv2:index 17;
+            lv2:index 16 ;
             lv2:maximum 10000 ;
             lv2:minimum 30 ;
             lv2:name "Freq Max" ;
@@ -499,7 +489,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#11_pink_noise_group> ;
             lv2:default 2 ;
-            lv2:index 18;
+            lv2:index 17 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "Freq Mod Curve" ;
@@ -508,7 +498,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#11_pink_noise_group> ;
             lv2:default 0 ;
-            lv2:index 19;
+            lv2:index 18 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Freq Modulation" ;
@@ -517,7 +507,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#11_pink_noise_group> ;
             lv2:default 3 ;
-            lv2:index 20;
+            lv2:index 19 ;
             lv2:maximum 4 ;
             lv2:minimum 0.5 ;
             lv2:name "Filter Q" ;
@@ -526,7 +516,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#11_pink_noise_group> ;
             lv2:default 0 ;
-            lv2:index 21;
+            lv2:index 20 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
             lv2:name "to FX chain" ;
@@ -536,7 +526,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
             lv2:default 0 ;
-            lv2:index 22;
+            lv2:index 21 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Dry/Wet" ;
@@ -545,7 +535,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
             lv2:default 1 ;
-            lv2:index 23;
+            lv2:index 22 ;
             lv2:maximum 20 ;
             lv2:minimum 1 ;
             lv2:name "Drive" ;
@@ -554,7 +544,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
             lv2:default 0 ;
-            lv2:index 24;
+            lv2:index 23 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Folding Min" ;
@@ -563,7 +553,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
             lv2:default 100 ;
-            lv2:index 25;
+            lv2:index 24 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Folding Max" ;
@@ -572,7 +562,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
             lv2:default 2 ;
-            lv2:index 26;
+            lv2:index 25 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "Folding Curve" ;
@@ -581,21 +571,21 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#23_wavefold_group> ;
             lv2:default 0 ;
-            lv2:index 27;
+            lv2:index 26 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Folding Modulation" ;
             lv2:symbol "_55_wavefold_folding_mod" ],
         [ a lv2:AudioPort,
                 lv2:OutputPort ;
-            lv2:index 2;
+            lv2:index 2 ;
             lv2:name "Audio Output 1" ;
             lv2:symbol "lv2_audio_out_1" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#22_distortion_group> ;
             lv2:default 0 ;
-            lv2:index 28;
+            lv2:index 27 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Wet/Dry" ;
@@ -604,7 +594,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#22_distortion_group> ;
             lv2:default 0 ;
-            lv2:index 29;
+            lv2:index 28 ;
             lv2:maximum 300 ;
             lv2:minimum 0 ;
             lv2:name "Knee Min" ;
@@ -613,21 +603,21 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#22_distortion_group> ;
             lv2:default 0 ;
-            lv2:index 30;
+            lv2:index 29 ;
             lv2:maximum 300 ;
             lv2:minimum 0 ;
             lv2:name "Knee Max" ;
             lv2:symbol "_62_distort_knee_maximum" ],
         [ a lv2:AudioPort,
                 lv2:OutputPort ;
-            lv2:index 3;
+            lv2:index 3 ;
             lv2:name "Audio Output 2" ;
             lv2:symbol "lv2_audio_out_2" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#22_distortion_group> ;
             lv2:default 2 ;
-            lv2:index 31;
+            lv2:index 30 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "Knee Mod Curve" ;
@@ -636,7 +626,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#22_distortion_group> ;
             lv2:default 0 ;
-            lv2:index 32;
+            lv2:index 31 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Knee Modulation" ;
@@ -645,7 +635,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#22_distortion_group> ;
             lv2:default 0 ;
-            lv2:index 33;
+            lv2:index 32 ;
             lv2:maximum 0.10000000149 ;
             lv2:minimum 0 ;
             lv2:name "Bias Min" ;
@@ -654,7 +644,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#22_distortion_group> ;
             lv2:default 0.10000000149 ;
-            lv2:index 34;
+            lv2:index 33 ;
             lv2:maximum 0.10000000149 ;
             lv2:minimum 0 ;
             lv2:name "Bias Max" ;
@@ -663,7 +653,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#22_distortion_group> ;
             lv2:default 2 ;
-            lv2:index 35;
+            lv2:index 34 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "Bias Mod Curve" ;
@@ -672,7 +662,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#22_distortion_group> ;
             lv2:default 0 ;
-            lv2:index 36;
+            lv2:index 35 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Bias Modulation" ;
@@ -681,7 +671,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#21_freqshift_group> ;
             lv2:default 0 ;
-            lv2:index 37;
+            lv2:index 36 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Wet/Dry" ;
@@ -690,7 +680,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#21_freqshift_group> ;
             lv2:default 0 ;
-            lv2:index 38;
+            lv2:index 37 ;
             lv2:maximum 1000 ;
             lv2:minimum -1000 ;
             lv2:name "FreqShift Min" ;
@@ -699,7 +689,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#21_freqshift_group> ;
             lv2:default 0 ;
-            lv2:index 39;
+            lv2:index 38 ;
             lv2:maximum 1000 ;
             lv2:minimum -1000 ;
             lv2:name "FreqShift Max" ;
@@ -708,7 +698,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#21_freqshift_group> ;
             lv2:default 2 ;
-            lv2:index 40;
+            lv2:index 39 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "FreqShift Mod Curve" ;
@@ -718,14 +708,14 @@
             atom:bufferType atom:Sequence ;
             atom:supports <http://lv2plug.in/ns/ext/time#Position> ;
             rsz:minimumSize 2048 ;
-            lv2:index 4;
+            lv2:index 4 ;
             lv2:name "Events Input" ;
             lv2:symbol "lv2_events_in" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#21_freqshift_group> ;
             lv2:default 0 ;
-            lv2:index 41;
+            lv2:index 40 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "FreqShift Modulation" ;
@@ -734,7 +724,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#31_st_stutter_group> ;
             lv2:default 0 ;
-            lv2:index 42;
+            lv2:index 41 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
             lv2:name "Wet/Dry" ;
@@ -743,7 +733,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#31_st_stutter_group> ;
             lv2:default 6 ;
-            lv2:index 43;
+            lv2:index 42 ;
             lv2:maximum 9 ;
             lv2:minimum 0 ;
             lv2:name "Interval" ;
@@ -794,7 +784,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#31_st_stutter_group> ;
             lv2:default 50 ;
-            lv2:index 44;
+            lv2:index 43 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Hardness" ;
@@ -803,7 +793,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#31_st_stutter_group> ;
             lv2:default 0 ;
-            lv2:index 45;
+            lv2:index 44 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
             lv2:name "Modulation" ;
@@ -813,7 +803,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#32_st_switch_group> ;
             lv2:default 0 ;
-            lv2:index 46;
+            lv2:index 45 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
             lv2:name "Wet/Dry" ;
@@ -822,7 +812,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#32_st_switch_group> ;
             lv2:default 6 ;
-            lv2:index 47;
+            lv2:index 46 ;
             lv2:maximum 10 ;
             lv2:minimum 3 ;
             lv2:name "Interval" ;
@@ -873,7 +863,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#32_st_switch_group> ;
             lv2:default 0 ;
-            lv2:index 48;
+            lv2:index 47 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
             lv2:name "Modulation" ;
@@ -883,7 +873,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#00_mixer_group> ;
             lv2:default 0 ;
-            lv2:index 5;
+            lv2:index 5 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Crossfader" ;
@@ -892,7 +882,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#33_stutter_group> ;
             lv2:default 0 ;
-            lv2:index 49;
+            lv2:index 48 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
             lv2:name "Wet/Dry" ;
@@ -901,7 +891,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#33_stutter_group> ;
             lv2:default 6 ;
-            lv2:index 50;
+            lv2:index 49 ;
             lv2:maximum 9 ;
             lv2:minimum 3 ;
             lv2:name "Interval" ;
@@ -952,7 +942,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#33_stutter_group> ;
             lv2:default 50 ;
-            lv2:index 51;
+            lv2:index 50 ;
             lv2:maximum 90 ;
             lv2:minimum 13 ;
             lv2:name "Length" ;
@@ -961,7 +951,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#33_stutter_group> ;
             lv2:default 50 ;
-            lv2:index 52;
+            lv2:index 51 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Hardness" ;
@@ -970,7 +960,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#33_stutter_group> ;
             lv2:default 0 ;
-            lv2:index 53;
+            lv2:index 52 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
             lv2:name "Modulation" ;
@@ -980,7 +970,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#40_filter_group> ;
             lv2:default 0 ;
-            lv2:index 54;
+            lv2:index 53 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "LP" ;
@@ -989,7 +979,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#41_lp_group> ;
             lv2:default 10000 ;
-            lv2:index 55;
+            lv2:index 54 ;
             lv2:maximum 20000 ;
             lv2:minimum 40 ;
             lv2:name "Freq Min" ;
@@ -998,7 +988,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#41_lp_group> ;
             lv2:default 100 ;
-            lv2:index 56;
+            lv2:index 55 ;
             lv2:maximum 20000 ;
             lv2:minimum 40 ;
             lv2:name "Freq Max" ;
@@ -1007,7 +997,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#41_lp_group> ;
             lv2:default 2 ;
-            lv2:index 57;
+            lv2:index 56 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "Freq Mod Curve" ;
@@ -1016,7 +1006,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#41_lp_group> ;
             lv2:default 0 ;
-            lv2:index 58;
+            lv2:index 57 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Freq Modulation" ;
@@ -1025,7 +1015,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#00_mixer_group> ;
             lv2:default 0 ;
-            lv2:index 6;
+            lv2:index 6 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
             lv2:name "Crossfade Trig" ;
@@ -1035,7 +1025,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#41_lp_group> ;
             lv2:default 1 ;
-            lv2:index 59;
+            lv2:index 58 ;
             lv2:maximum 4 ;
             lv2:minimum 0.10000000149 ;
             lv2:name "Q Min" ;
@@ -1044,7 +1034,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#41_lp_group> ;
             lv2:default 3 ;
-            lv2:index 60;
+            lv2:index 59 ;
             lv2:maximum 4 ;
             lv2:minimum 0.10000000149 ;
             lv2:name "Q Max" ;
@@ -1053,7 +1043,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#41_lp_group> ;
             lv2:default 2 ;
-            lv2:index 61;
+            lv2:index 60 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "Q Mod Curve" ;
@@ -1062,7 +1052,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#41_lp_group> ;
             lv2:default 0 ;
-            lv2:index 62;
+            lv2:index 61 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Q Modulation" ;
@@ -1071,7 +1061,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#40_filter_group> ;
             lv2:default 0 ;
-            lv2:index 63;
+            lv2:index 62 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "HP" ;
@@ -1080,7 +1070,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#42_hp_group> ;
             lv2:default 50 ;
-            lv2:index 64;
+            lv2:index 63 ;
             lv2:maximum 20000 ;
             lv2:minimum 40 ;
             lv2:name "Freq Min" ;
@@ -1089,7 +1079,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#42_hp_group> ;
             lv2:default 1000 ;
-            lv2:index 65;
+            lv2:index 64 ;
             lv2:maximum 20000 ;
             lv2:minimum 40 ;
             lv2:name "Freq Max" ;
@@ -1098,7 +1088,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#42_hp_group> ;
             lv2:default 2 ;
-            lv2:index 66;
+            lv2:index 65 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "Freq Mod Curve" ;
@@ -1107,7 +1097,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#42_hp_group> ;
             lv2:default 0 ;
-            lv2:index 67;
+            lv2:index 66 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Freq Modulation" ;
@@ -1116,7 +1106,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#42_hp_group> ;
             lv2:default 1 ;
-            lv2:index 68;
+            lv2:index 67 ;
             lv2:maximum 4 ;
             lv2:minimum 0.10000000149 ;
             lv2:name "Q Min" ;
@@ -1125,7 +1115,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#00_mixer_group> ;
             lv2:default 130 ;
-            lv2:index 7;
+            lv2:index 7 ;
             lv2:maximum 480 ;
             lv2:minimum 40 ;
             lv2:name "BPM" ;
@@ -1136,7 +1126,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#42_hp_group> ;
             lv2:default 3 ;
-            lv2:index 69;
+            lv2:index 68 ;
             lv2:maximum 4 ;
             lv2:minimum 0.10000000149 ;
             lv2:name "Q Max" ;
@@ -1145,7 +1135,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#42_hp_group> ;
             lv2:default 2 ;
-            lv2:index 70;
+            lv2:index 69 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "Q Mod Curve" ;
@@ -1154,7 +1144,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#42_hp_group> ;
             lv2:default 0 ;
-            lv2:index 71;
+            lv2:index 70 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Q Modulation" ;
@@ -1163,7 +1153,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#40_filter_group> ;
             lv2:default 0 ;
-            lv2:index 72;
+            lv2:index 71 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "BP" ;
@@ -1172,7 +1162,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#43_bp_group> ;
             lv2:default 3000 ;
-            lv2:index 73;
+            lv2:index 72 ;
             lv2:maximum 20000 ;
             lv2:minimum 40 ;
             lv2:name "Freq Min" ;
@@ -1181,7 +1171,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#43_bp_group> ;
             lv2:default 10000 ;
-            lv2:index 74;
+            lv2:index 73 ;
             lv2:maximum 20000 ;
             lv2:minimum 40 ;
             lv2:name "Freq Max" ;
@@ -1190,7 +1180,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#43_bp_group> ;
             lv2:default 2 ;
-            lv2:index 75;
+            lv2:index 74 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "Freq Mod Curve" ;
@@ -1199,7 +1189,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#43_bp_group> ;
             lv2:default 0 ;
-            lv2:index 76;
+            lv2:index 75 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Freq Modulation" ;
@@ -1208,7 +1198,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#43_bp_group> ;
             lv2:default 1 ;
-            lv2:index 77;
+            lv2:index 76 ;
             lv2:maximum 6 ;
             lv2:minimum 0.10000000149 ;
             lv2:name "Q Min" ;
@@ -1217,7 +1207,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#43_bp_group> ;
             lv2:default 4 ;
-            lv2:index 78;
+            lv2:index 77 ;
             lv2:maximum 6 ;
             lv2:minimum 0.10000000149 ;
             lv2:name "Q Max" ;
@@ -1226,7 +1216,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#02_looper_group> ;
             lv2:default 1 ;
-            lv2:index 8;
+            lv2:index 8 ;
             lv2:maximum 1 ;
             lv2:minimum 0 ;
             lv2:name "On Off" ;
@@ -1236,7 +1226,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#43_bp_group> ;
             lv2:default 2 ;
-            lv2:index 79;
+            lv2:index 78 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "Q Mod Curve" ;
@@ -1245,7 +1235,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#43_bp_group> ;
             lv2:default 0 ;
-            lv2:index 80;
+            lv2:index 79 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Q Modulation" ;
@@ -1254,7 +1244,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#40_filter_group> ;
             lv2:default 0 ;
-            lv2:index 81;
+            lv2:index 80 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Notch" ;
@@ -1263,7 +1253,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#44_notch_group> ;
             lv2:default 200 ;
-            lv2:index 82;
+            lv2:index 81 ;
             lv2:maximum 20000 ;
             lv2:minimum 40 ;
             lv2:name "Freq Min" ;
@@ -1272,7 +1262,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#44_notch_group> ;
             lv2:default 2000 ;
-            lv2:index 83;
+            lv2:index 82 ;
             lv2:maximum 20000 ;
             lv2:minimum 40 ;
             lv2:name "Freq Max" ;
@@ -1281,7 +1271,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#44_notch_group> ;
             lv2:default 2 ;
-            lv2:index 84;
+            lv2:index 83 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "Freq Mod Curve" ;
@@ -1290,7 +1280,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#44_notch_group> ;
             lv2:default 0 ;
-            lv2:index 85;
+            lv2:index 84 ;
             lv2:maximum 100 ;
             lv2:minimum 0 ;
             lv2:name "Modulation" ;
@@ -1299,7 +1289,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#44_notch_group> ;
             lv2:default 0.5 ;
-            lv2:index 86;
+            lv2:index 85 ;
             lv2:maximum 4 ;
             lv2:minimum 0.10000000149 ;
             lv2:name "Q Min" ;
@@ -1308,7 +1298,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#44_notch_group> ;
             lv2:default 3 ;
-            lv2:index 87;
+            lv2:index 86 ;
             lv2:maximum 4 ;
             lv2:minimum 0.10000000149 ;
             lv2:name "Q Max" ;
@@ -1317,7 +1307,7 @@
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#44_notch_group> ;
             lv2:default 2 ;
-            lv2:index 88;
+            lv2:index 87 ;
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "Q Mod Curve" ;

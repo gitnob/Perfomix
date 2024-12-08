@@ -23,7 +23,36 @@ No extra pd libraries are needed, it's hvcc safe.
 The most easiest way is to use plugdata. You can download it from https://plugdata.org/ .
 Load the Perfomix.pd patch and compile as described on their website. This is available for different environments and is preferable for regular users.
 
-# Specific zynthian (oram) compilation and installation
+# Easy way installing into zynthian's environment
+
+During this process an extra pip library (hvcc) is loaded into the virtual environment of zynthian.
+Install the install_Perfomix.sh script in the zynthian's plugin folder for recipes. Make it executable and run it.
+Use the zynthian terminal (webconf) or a ssh terminal to zynthian.
+
+```
+cd $ZYNTHIAN_SYS/DIR/scripts/recipes
+wget https://github.com/gitnob/Perfomix/blob/main/scripts/install_Perfomix.sh
+chmod u+x install_Perfomix.sh
+```
+
+Install Perfomix into $ZYNTHIAN_PLUGINS_DIR/lv2 and the preset into $ZYNTHIAN_DATA_DIR/presets/lv2!
+
+```
+./install_Perfomix.sh
+```
+
+Regenerate lv2 engines in DB and regenerate lv2 presets.
+
+```
+regenerate_engines_db.sh
+regenerate_lv2_presets.sh
+```
+
+Reboot zynthian.
+
+**Updating is easy, just run the install_Perfomix.sh script again!**
+
+# Detailed zynthian compilation and installation
 Because at the moment plugdata does not have a arm64 export mechanism, it is necessary to compile the plugin for the raspberry pi OS on the command line.
 Compilation on the command line involves some basic understanding of directories and text editing. You also need git.
 
@@ -89,7 +118,49 @@ regenerate_lv2_presets.sh
 
 OR: Update the engines and presets in webconf and toggle Perfomix. Restart zynthian.
 
+# Detailed plugin update
 
+**Deactivate Zynthian's virtual python environment!!**
+```
+deactivate  # deactivates the actual zynthian virtual python environment
+```
 
+Goto the src code, where Perfomix source is installed (see above "anyfolder/src").
+```
+cd pd_to_zynthian_oram
+cd pd/Perfomix
+git pull
+cd ../..
+bin/compile.sh -c pd/Perfomix/perfomix.sh
+```
+
+Copy custom manifest.ttl files into newly generated lv directory
+```
+cp pd/Perfomix/*.ttl $PWD/gen/bin/Perfomix.lv2
+```
+
+If you linked the Perfomix lv2 plugin, you're fine.
+
+If you copied the Perfomix lv2 plugin into zynthian's plugin directory
+```
+cp -r gen/bin/Perfomix.lv2 $ZYNTHIAN_PLUGINS_DIR/lv2
+```
+
+At last copy the default presets into zynthian's plugin data presets folder
+```
+cp -r pd/Perfomix/Perfomix_Default.preset.lv2 $ZYNTHIAN_DATA_DIR/presets/lv2/
+```
+
+**Activate Zynthian's virtual python environment again!!**
+```
+source $ZYNTHIAN_DIR/venv/bin/activate
+```
+
+Update the engines and lv2 presets on the command line with 
+
+```
+regenerate_engines_db.sh
+regenerate_lv2_presets.sh
+```
 
  
