@@ -31,7 +31,7 @@ Use the zynthian terminal (webconf) or a ssh terminal to zynthian.
 
 ```
 cd $ZYNTHIAN_SYS/DIR/scripts/recipes
-wget https://github.com/gitnob/Perfomix/blob/main/scripts/install_Perfomix.sh
+wget https://github.com/gitnob/Perfomix/raw/refs/heads/main/scripts/install_Perfomix.sh
 chmod u+x install_Perfomix.sh
 ```
 
