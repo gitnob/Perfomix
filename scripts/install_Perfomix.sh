@@ -63,7 +63,7 @@ PDFILE=$ZYNTHIAN_PLUGINS_SRC_DIR/$PERFOMIX_DIR/Perfomix/Perfomix.pd
 METAFILE=$ZYNTHIAN_PLUGINS_SRC_DIR/$PERFOMIX_DIR/Perfomix/Perfomix.json
 LV_NAME=Perfomix
 LV2_URI="lv2://nobisoft.de/Perfomix"		
-LV_COPYRIGHT="Copyright 2024 Gaggenau Nobisoft"
+LV_COPYRIGHT="GPLv3 2024 Gaggenau Nobisoft"
 HVLIB=./lib/heavylib/
 
 # generating hvcc files
