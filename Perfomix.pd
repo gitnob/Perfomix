@@ -301,7 +301,7 @@
 #X obj 1412 458 lop~ 10;
 #X obj 1193 506 lop~ 10;
 #X obj 39 123 > 0.04;
-#N canvas 0 50 450 300 buildup_ramp 1;
+#N canvas 0 50 450 300 buildup_ramp 0;
 #X obj 323 53 inlet bpm;
 #X obj 367 241 / 1;
 #X obj 323 114 change;
@@ -3649,6 +3649,7 @@
 #X obj 299 515 int;
 #X obj 579 645 r _23_buildup_amplitude @hv_param 0 100 0;
 #X msg 723 702 0;
+#X obj 33 427 s _02_bpm_custom @hv_param;
 #X connect 1 0 12 0;
 #X connect 2 0 43 0;
 #X connect 3 0 68 0;
@@ -3665,6 +3666,7 @@
 #X connect 10 0 73 0;
 #X connect 11 0 110 0;
 #X connect 12 0 68 0;
+#X connect 12 0 120 0;
 #X connect 13 0 63 0;
 #X connect 13 1 64 0;
 #X connect 14 0 71 0;
