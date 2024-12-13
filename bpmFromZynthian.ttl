@@ -1136,7 +1136,9 @@
             lv2:maximum 480 ;
             lv2:minimum 40 ;
             lv2:name "Manual BPM" ;
-            lv2:symbol "_02_bpm_custom" ; ],
+            lv2:symbol "_02_bpm_custom" ;
+            ue:unit ue:bpm ;
+            lv2:designation <http://lv2plug.in/ns/ext/time#beatsPerMinute> ; ],
         [ a lv2:InputPort, lv2:ControlPort ;
             pg:group <lv2://nobisoft.de/Perfomix#00_mixer_group> ;
             lv2:index 8;
