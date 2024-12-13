@@ -3649,7 +3649,7 @@
 #X obj 299 515 int;
 #X obj 579 645 r _23_buildup_amplitude @hv_param 0 100 0;
 #X msg 723 702 0;
-#X obj 33 427 s _02_bpm_custom @hv_param;
+#X obj 33 427 s bpm_custom @hv_param;
 #X connect 1 0 12 0;
 #X connect 2 0 43 0;
 #X connect 3 0 68 0;
