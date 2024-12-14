@@ -1,0 +1,17 @@
+{
+    "dpf": {
+        "project": true,
+        "description": "Build-up audio effects with looper and single crossfade function",
+        "maker": "nobisoft",
+        "plugin_uri": "lv2://nobisoft.de/Perfomixdev",
+        "version": "0, 1, 0",
+        "license": "lic:GPLv3",
+        "midi_input": 0,
+        "midi_output": 0,
+        "dpf_path": "../gen/",
+        "enable_ui": false,
+        "plugin_formats": [
+            "lv2"
+        ]
+    }
+} 
