@@ -12,3 +12,4 @@ test_wavefolder.pd
 wavefolder-backup.pd
 /extra
 bpmFromZynthian.ttl.backup
+*.bak
