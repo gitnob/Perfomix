@@ -17,8 +17,14 @@
 		lv2:symbol "_01_cross_trigger" ;
 		pset:value 0.0
 	] , [
-		lv2:symbol "_02_bpm_custom" ;
-		pset:value 101.59999847
+		lv2:symbol "_02_bpm_host" ;
+		pset:value 120.0
+	] , [
+		lv2:symbol "_03_bpm_custom" ;
+		pset:value 130.0
+	] , [
+		lv2:symbol "_04_bpm_host_switch" ;
+		pset:value 1.0
 	] , [
 		lv2:symbol "_10_looper_onoff" ;
 		pset:value 1.0
