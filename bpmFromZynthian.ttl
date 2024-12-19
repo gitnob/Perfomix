@@ -27,6 +27,98 @@
             lv2:index 0;
             lv2:name "Audio Input 1" ;
             lv2:symbol "lv2_audio_in_1" ],
+        [ a lv2:AudioPort,
+                lv2:InputPort ;
+            lv2:index 1;
+            lv2:name "Audio Input 2" ;
+            lv2:symbol "lv2_audio_in_2" ],
+        [ a lv2:AudioPort,
+                lv2:OutputPort ;
+            lv2:index 2;
+            lv2:name "Audio Output 1" ;
+            lv2:symbol "lv2_audio_out_1" ],
+        [ a lv2:AudioPort,
+                lv2:OutputPort ;
+            lv2:index 3;
+            lv2:name "Audio Output 2" ;
+            lv2:symbol "lv2_audio_out_2" ],
+        [ a atom:AtomPort,
+                lv2:InputPort ;
+            atom:bufferType atom:Sequence ;
+            atom:supports <http://lv2plug.in/ns/ext/time#Position> ;
+            rsz:minimumSize 2048 ;
+            lv2:index 4;
+            lv2:name "Events Input" ;
+            lv2:symbol "lv2_events_in" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#00_mixer_group> ;
+            lv2:default 0 ;
+            lv2:index 5;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Crossfader" ;
+            lv2:symbol "_00_cross_fader" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#00_mixer_group> ;
+            lv2:default 0 ;
+            lv2:index 6;
+            lv2:maximum 1 ;
+            lv2:minimum 0 ;
+            lv2:name "Crossfade Trig" ;
+            lv2:portProperty lv2:toggled ;
+            lv2:symbol "_01_cross_trigger" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#01_bpm_group> ;
+            lv2:default 120 ;
+            lv2:index 7;
+            lv2:maximum 120 ;
+            lv2:minimum 120 ;
+            lv2:name "Auto Host BPM" ;
+            lv2:symbol "_02_bpm_host" ;
+            ue:unit ue:bpm ;
+            lv2:designation <http://lv2plug.in/ns/ext/time#beatsPerMinute> ; ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#01_bpm_group> ;
+            lv2:default 130 ;
+            lv2:index 8;
+            lv2:maximum 480 ;
+            lv2:minimum 40 ;
+            lv2:name "Manual BPM" ;
+            lv2:symbol "_03_bpm_custom" ; ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#01_bpm_group> ;
+            lv2:default 1 ;
+            lv2:index 9;
+            lv2:maximum 1 ;
+            lv2:minimum 0 ;
+            lv2:name "Sync Host BPM" ;
+            lv2:portProperty lv2:toggled ;
+            lv2:symbol "_04_bpm_host_switch" ; ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#02_looper_group> ;
+            lv2:default 1 ;
+            lv2:index 10;
+            lv2:maximum 1 ;
+            lv2:minimum 0 ;
+            lv2:name "On Off" ;
+            lv2:portProperty lv2:toggled ;
+            lv2:symbol "_10_looper_onoff" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#02_looper_group> ;
+            lv2:default 1 ;
+            lv2:index 11;
+            lv2:maximum 16 ;
+            lv2:minimum 1 ;
+            lv2:portProperty lv2:integer;
+            lv2:name "Measure Counter" ;
+            lv2:symbol "_11_looper_measure_counter" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#02_looper_group> ;
@@ -65,96 +157,6 @@
             ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#44_notch_group> ;
-            lv2:default 0 ;
-            lv2:index 91;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Q Modulation" ;
-            lv2:symbol "_f8_notch_q_mod" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
-            lv2:default 0 ;
-            lv2:index 92;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Wet/Dry" ;
-            lv2:symbol "_g0_filter_amount_flanger" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
-            lv2:default 4.2 ;
-            lv2:index 93;
-            lv2:maximum 10.0 ;
-            lv2:minimum 0.0 ;
-            lv2:name "Freq" ;
-            lv2:symbol "_g1_flanger_freq_max" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
-            lv2:default 100 ;
-            lv2:index 94;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Freq Modulation" ;
-            lv2:symbol "_g2_flanger_freq_mod" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
-            lv2:default 50 ;
-            lv2:index 95;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Feedback" ;
-            lv2:symbol "_g3_flanger_fback_max" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
-            lv2:default 100 ;
-            lv2:index 96;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Feedback Modulation" ;
-            lv2:symbol "_g4_flanger_fback_mod" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
-            lv2:default 50 ;
-            lv2:index 97;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Intensity" ;
-            lv2:symbol "_g5_flanger_intensity_max" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
-            lv2:default 100 ;
-            lv2:index 98;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Intensity Modulation" ;
-            lv2:symbol "_g6_flanger_intensity_mod" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#46_phaser_group> ;
-            lv2:default 0 ;
-            lv2:index 99;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Wet/Dry" ;
-            lv2:symbol "_h0_filter_amount_phaser" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#46_phaser_group> ;
-            lv2:default 4.3 ;
-            lv2:index 100;
-            lv2:maximum 10.0 ;
-            lv2:minimum 0.1 ;
-            lv2:name "Freq" ;
-            lv2:symbol "_h1_phaser_freq" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#02_looper_group> ;
             lv2:default 0 ;
             lv2:index 13;
@@ -163,107 +165,6 @@
             lv2:name "Triplet division" ;
             lv2:portProperty lv2:toggled ;
             lv2:symbol "_13_looper_beat_triplet" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#02_looper_group> ;
-            lv2:default 1 ;
-            lv2:index 11;
-            lv2:maximum 16 ;
-            lv2:minimum 1 ;
-            lv2:portProperty lv2:integer;
-            lv2:name "Measure Counter" ;
-            lv2:symbol "_11_looper_measure_counter" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#46_phaser_group> ;
-            lv2:default 10 ;
-            lv2:index 101;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Freq Modulation" ;
-            lv2:symbol "_h2_phaser_freq_mod" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#46_phaser_group> ;
-            lv2:default 0 ;
-            lv2:index 102;
-            lv2:maximum 1 ;
-            lv2:minimum 0 ;
-            lv2:portProperty lv2:toggled ;
-            lv2:name "Mod Inversion" ;
-            lv2:symbol "_h3_phaser_mod_inv" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
-            lv2:default 0 ;
-            lv2:index 103;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Wet/Dry Min" ;
-            lv2:symbol "_i0_pingpong_amount_min" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
-            lv2:default 100 ;
-            lv2:index 104;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Wet/Dry Max" ;
-            lv2:symbol "_i1_pingpong_amount_max" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
-            lv2:default 0.5 ;
-            lv2:index 105;
-            lv2:maximum 4 ;
-            lv2:minimum 0.25 ;
-            lv2:name "Wet/Dry Curve" ;
-            lv2:symbol "_i2_pingpong_amount_exponent" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
-            lv2:default 0 ;
-            lv2:index 106;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Wet/Dry Modulation" ;
-            lv2:symbol "_i3_pingpong_amount_mod" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
-            lv2:default 70 ;
-            lv2:index 107;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Feedback Min" ;
-            lv2:symbol "_i4_pingpong_feedback_min" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
-            lv2:default 100 ;
-            lv2:index 108;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Feedback Max" ;
-            lv2:symbol "_i5_pingpong_feedback_max" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
-            lv2:default 0.5 ;
-            lv2:index 109;
-            lv2:maximum 4 ;
-            lv2:minimum 0.25 ;
-            lv2:name "Feedback Curve" ;
-            lv2:symbol "_i6_pingpong_feedback_exponent" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
-            lv2:default 0 ;
-            lv2:index 110;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Feedback Modulation" ;
-            lv2:symbol "_i7_pingpong_feedback_mod" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#03_buildup_group> ;
@@ -293,125 +194,6 @@
             lv2:symbol "_20_buildup_style" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
-            lv2:default 0 ;
-            lv2:index 111;
-            lv2:maximum 1 ;
-            lv2:minimum 0 ;
-            lv2:name "Triplett" ;
-            lv2:portProperty lv2:toggled ;
-            lv2:symbol "_i8_pingpong_delay_triplet" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
-            lv2:default 3 ;
-            lv2:index 112;
-            lv2:maximum 5 ;
-            lv2:minimum 0 ;
-            lv2:name "Division" ;
-            lv2:portProperty lv2:integer;
-            lv2:portProperty lv2:enumeration ;
-            lv2:scalePoint [
-                rdfs:label  "1/64" ;
-                rdf:value 0 ;
-            ] ,
-            [
-                rdfs:label  "1/32" ;
-                rdf:value 1 ;
-            ] ,
-            [
-                rdfs:label  "1/16" ;
-                rdf:value 2 ;
-            ] ,
-            [
-                rdfs:label  "1/8" ;
-                rdf:value 3 ;
-            ] ,
-            [
-                rdfs:label  "1/4" ;
-                rdf:value 4 ;
-            ] ,
-            [
-                rdfs:label  "1/2" ;
-                rdf:value 5 ;
-            ] ;            lv2:symbol "_i9_pingpong_delay_synced_partial" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
-            lv2:default 3 ;
-            lv2:index 113;
-            lv2:maximum 8 ;
-            lv2:minimum 1 ;
-            lv2:portProperty lv2:integer;
-            lv2:name "Ping Delay" ;
-            lv2:symbol "_ia_pingpong_ping" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
-            lv2:default 3 ;
-            lv2:index 114;
-            lv2:maximum 8 ;
-            lv2:minimum 1 ;
-            lv2:portProperty lv2:integer;
-            lv2:name "Pong Delay" ;
-            lv2:symbol "_ib_pingpong_pong" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
-            lv2:default 1 ;
-            lv2:index 115;
-            lv2:maximum 1 ;
-            lv2:minimum 0 ;
-            lv2:name "Reset On Start" ;
-            lv2:portProperty lv2:toggled ;
-            lv2:symbol "_ic_pingpong_on_buildup_reset" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
-            lv2:default 0 ;
-            lv2:index 116;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Wet/Dry" ;
-            lv2:symbol "_k0_reverb_amount" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
-            lv2:default 0 ;
-            lv2:index 117;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Wet/Dry Modulation" ;
-            lv2:symbol "_k1_reverb_amount_mod" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
-            lv2:default 0 ;
-            lv2:index 118;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Feedback" ;
-            lv2:symbol "_k2_reverb_feedback" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
-            lv2:default 60 ;
-            lv2:index 119;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Damping" ;
-            lv2:symbol "_k3_reverb_damp" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
-            lv2:default 5 ;
-            lv2:index 120;
-            lv2:maximum 25000 ;
-            lv2:minimum 5 ;
-            lv2:name "Low Cut" ;
-            lv2:symbol "_k4_reverb_lowcut" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#03_buildup_group> ;
             lv2:default 16 ;
             lv2:index 15;
@@ -420,47 +202,6 @@
             lv2:portProperty lv2:integer;
             lv2:name "1/4 note length" ;
             lv2:symbol "_21_buildup_length" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
-            lv2:default 24000 ;
-            lv2:index 121;
-            lv2:maximum 25000 ;
-            lv2:minimum 5 ;
-            lv2:name "High Cut" ;
-            lv2:symbol "_k5_reverb_highcut" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
-            lv2:default 3000 ;
-            lv2:index 122;
-            lv2:maximum 25000 ;
-            lv2:minimum 0 ;
-            lv2:name "Cross Freq" ;
-            lv2:symbol "_k6_reverb_crossfreq" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
-            lv2:default 0 ;
-            lv2:index 123;
-            lv2:maximum 2800 ;
-            lv2:minimum 0 ;
-            lv2:name "Predelay" ;
-            lv2:symbol "_k7_reverb_predelay" ],
-        [ a lv2:ControlPort,
-                lv2:OutputPort ;
-            lv2:index 124;
-            lv2:maximum 1 ;
-            lv2:minimum 0 ;
-            lv2:name "buildup position" ;
-            lv2:symbol "buildup_position" ],
-        [ a lv2:ControlPort,
-                lv2:OutputPort ;
-            lv2:index 125;
-            lv2:maximum 400 ;
-            lv2:minimum 10 ;
-            lv2:name "Host BPM" ;
-            lv2:symbol "host_bpm" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#00_mixer_group> ;
@@ -488,11 +229,6 @@
             lv2:minimum 20 ;
             lv2:name "Freq Min" ;
             lv2:symbol "_41_p_noise_minimum" ],
-        [ a lv2:AudioPort,
-                lv2:InputPort ;
-            lv2:index 1;
-            lv2:name "Audio Input 2" ;
-            lv2:symbol "lv2_audio_in_2" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#11_pink_noise_group> ;
@@ -593,11 +329,6 @@
             lv2:minimum 0 ;
             lv2:name "Folding Modulation" ;
             lv2:symbol "_55_wavefold_folding_mod" ],
-        [ a lv2:AudioPort,
-                lv2:OutputPort ;
-            lv2:index 2;
-            lv2:name "Audio Output 1" ;
-            lv2:symbol "lv2_audio_out_1" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#22_distortion_group> ;
@@ -625,11 +356,6 @@
             lv2:minimum 0 ;
             lv2:name "Knee Max" ;
             lv2:symbol "_62_distort_knee_maximum" ],
-        [ a lv2:AudioPort,
-                lv2:OutputPort ;
-            lv2:index 3;
-            lv2:name "Audio Output 2" ;
-            lv2:symbol "lv2_audio_out_2" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#22_distortion_group> ;
@@ -720,14 +446,6 @@
             lv2:minimum 0.25 ;
             lv2:name "FreqShift Mod Curve" ;
             lv2:symbol "_73_freqshift_exponent" ],
-        [ a atom:AtomPort,
-                lv2:InputPort ;
-            atom:bufferType atom:Sequence ;
-            atom:supports <http://lv2plug.in/ns/ext/time#Position> ;
-            rsz:minimumSize 2048 ;
-            lv2:index 4;
-            lv2:name "Events Input" ;
-            lv2:symbol "lv2_events_in" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#21_freqshift_group> ;
@@ -888,15 +606,6 @@
             lv2:symbol "_a2_stereo_switch_interval_modulation" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#00_mixer_group> ;
-            lv2:default 0 ;
-            lv2:index 5;
-            lv2:maximum 100 ;
-            lv2:minimum 0 ;
-            lv2:name "Crossfader" ;
-            lv2:symbol "_00_cross_fader" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#33_stutter_group> ;
             lv2:default 0 ;
             lv2:index 51;
@@ -1030,16 +739,6 @@
             lv2:symbol "_c4_lp_freq_mod" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#00_mixer_group> ;
-            lv2:default 0 ;
-            lv2:index 6;
-            lv2:maximum 1 ;
-            lv2:minimum 0 ;
-            lv2:name "Crossfade Trig" ;
-            lv2:portProperty lv2:toggled ;
-            lv2:symbol "_01_cross_trigger" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#41_lp_group> ;
             lv2:default 1 ;
             lv2:index 61;
@@ -1128,36 +827,6 @@
             lv2:minimum 0.10000000149 ;
             lv2:name "Q Min" ;
             lv2:symbol "_d5_hp_q_min" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#01_bpm_group> ;
-            lv2:default 120 ;
-            lv2:index 7;
-            lv2:maximum 120 ;
-            lv2:minimum 120 ;
-            lv2:name "Auto Host BPM" ;
-            lv2:symbol "_02_bpm_host" ;
-            ue:unit ue:bpm ;
-            lv2:designation <http://lv2plug.in/ns/ext/time#beatsPerMinute> ; ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#01_bpm_group> ;
-            lv2:default 130 ;
-            lv2:index 8;
-            lv2:maximum 480 ;
-            lv2:minimum 40 ;
-            lv2:name "Manual BPM" ;
-            lv2:symbol "_03_bpm_custom" ; ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#01_bpm_group> ;
-            lv2:default 1 ;
-            lv2:index 9;
-            lv2:maximum 1 ;
-            lv2:minimum 0 ;
-            lv2:name "Sync Host BPM" ;
-            lv2:portProperty lv2:toggled ;
-            lv2:symbol "_04_bpm_host_switch" ; ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#42_hp_group> ;
@@ -1250,16 +919,6 @@
             lv2:symbol "_e6_bp_q_max" ],
         [ a lv2:ControlPort,
                 lv2:InputPort ;
-            pg:group <lv2://nobisoft.de/Perfomix#02_looper_group> ;
-            lv2:default 1 ;
-            lv2:index 10;
-            lv2:maximum 1 ;
-            lv2:minimum 0 ;
-            lv2:name "On Off" ;
-            lv2:portProperty lv2:toggled ;
-            lv2:symbol "_10_looper_onoff" ],
-        [ a lv2:ControlPort,
-                lv2:InputPort ;
             pg:group <lv2://nobisoft.de/Perfomix#43_bp_group> ;
             lv2:default 2 ;
             lv2:index 81;
@@ -1347,7 +1006,349 @@
             lv2:maximum 4 ;
             lv2:minimum 0.25 ;
             lv2:name "Q Mod Curve" ;
-            lv2:symbol "_f7_notch_q_exponent" ] ;
+            lv2:symbol "_f7_notch_q_exponent" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#44_notch_group> ;
+            lv2:default 0 ;
+            lv2:index 91;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Q Modulation" ;
+            lv2:symbol "_f8_notch_q_mod" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
+            lv2:default 0 ;
+            lv2:index 92;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Wet/Dry" ;
+            lv2:symbol "_g0_filter_amount_flanger" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
+            lv2:default 4.2 ;
+            lv2:index 93;
+            lv2:maximum 10.0 ;
+            lv2:minimum 0.0 ;
+            lv2:name "Freq" ;
+            lv2:symbol "_g1_flanger_freq_max" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
+            lv2:default 100 ;
+            lv2:index 94;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Freq Modulation" ;
+            lv2:symbol "_g2_flanger_freq_mod" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
+            lv2:default 50 ;
+            lv2:index 95;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Feedback" ;
+            lv2:symbol "_g3_flanger_fback_max" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
+            lv2:default 100 ;
+            lv2:index 96;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Feedback Modulation" ;
+            lv2:symbol "_g4_flanger_fback_mod" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
+            lv2:default 50 ;
+            lv2:index 97;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Intensity" ;
+            lv2:symbol "_g5_flanger_intensity_max" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#45_flanger_group> ;
+            lv2:default 100 ;
+            lv2:index 98;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Intensity Modulation" ;
+            lv2:symbol "_g6_flanger_intensity_mod" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#46_phaser_group> ;
+            lv2:default 0 ;
+            lv2:index 99;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Wet/Dry" ;
+            lv2:symbol "_h0_filter_amount_phaser" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#46_phaser_group> ;
+            lv2:default 4.3 ;
+            lv2:index 100;
+            lv2:maximum 10.0 ;
+            lv2:minimum 0.1 ;
+            lv2:name "Freq" ;
+            lv2:symbol "_h1_phaser_freq" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#46_phaser_group> ;
+            lv2:default 10 ;
+            lv2:index 101;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Freq Modulation" ;
+            lv2:symbol "_h2_phaser_freq_mod" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#46_phaser_group> ;
+            lv2:default 0 ;
+            lv2:index 102;
+            lv2:maximum 1 ;
+            lv2:minimum 0 ;
+            lv2:portProperty lv2:toggled ;
+            lv2:name "Mod Inversion" ;
+            lv2:symbol "_h3_phaser_mod_inv" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
+            lv2:default 0 ;
+            lv2:index 103;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Wet/Dry Min" ;
+            lv2:symbol "_i0_pingpong_amount_min" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
+            lv2:default 100 ;
+            lv2:index 104;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Wet/Dry Max" ;
+            lv2:symbol "_i1_pingpong_amount_max" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
+            lv2:default 0.5 ;
+            lv2:index 105;
+            lv2:maximum 4 ;
+            lv2:minimum 0.25 ;
+            lv2:name "Wet/Dry Curve" ;
+            lv2:symbol "_i2_pingpong_amount_exponent" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
+            lv2:default 0 ;
+            lv2:index 106;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Wet/Dry Modulation" ;
+            lv2:symbol "_i3_pingpong_amount_mod" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
+            lv2:default 70 ;
+            lv2:index 107;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Feedback Min" ;
+            lv2:symbol "_i4_pingpong_feedback_min" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
+            lv2:default 100 ;
+            lv2:index 108;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Feedback Max" ;
+            lv2:symbol "_i5_pingpong_feedback_max" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
+            lv2:default 0.5 ;
+            lv2:index 109;
+            lv2:maximum 4 ;
+            lv2:minimum 0.25 ;
+            lv2:name "Feedback Curve" ;
+            lv2:symbol "_i6_pingpong_feedback_exponent" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
+            lv2:default 0 ;
+            lv2:index 110;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Feedback Modulation" ;
+            lv2:symbol "_i7_pingpong_feedback_mod" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
+            lv2:default 0 ;
+            lv2:index 111;
+            lv2:maximum 1 ;
+            lv2:minimum 0 ;
+            lv2:name "Triplett" ;
+            lv2:portProperty lv2:toggled ;
+            lv2:symbol "_i8_pingpong_delay_triplet" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
+            lv2:default 3 ;
+            lv2:index 112;
+            lv2:maximum 5 ;
+            lv2:minimum 0 ;
+            lv2:name "Division" ;
+            lv2:portProperty lv2:integer;
+            lv2:portProperty lv2:enumeration ;
+            lv2:scalePoint [
+                rdfs:label  "1/64" ;
+                rdf:value 0 ;
+            ] ,
+            [
+                rdfs:label  "1/32" ;
+                rdf:value 1 ;
+            ] ,
+            [
+                rdfs:label  "1/16" ;
+                rdf:value 2 ;
+            ] ,
+            [
+                rdfs:label  "1/8" ;
+                rdf:value 3 ;
+            ] ,
+            [
+                rdfs:label  "1/4" ;
+                rdf:value 4 ;
+            ] ,
+            [
+                rdfs:label  "1/2" ;
+                rdf:value 5 ;
+            ] ;            lv2:symbol "_i9_pingpong_delay_synced_partial" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
+            lv2:default 3 ;
+            lv2:index 113;
+            lv2:maximum 8 ;
+            lv2:minimum 1 ;
+            lv2:portProperty lv2:integer;
+            lv2:name "Ping Delay" ;
+            lv2:symbol "_ia_pingpong_ping" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
+            lv2:default 3 ;
+            lv2:index 114;
+            lv2:maximum 8 ;
+            lv2:minimum 1 ;
+            lv2:portProperty lv2:integer;
+            lv2:name "Pong Delay" ;
+            lv2:symbol "_ib_pingpong_pong" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#51_pingpong_group> ;
+            lv2:default 1 ;
+            lv2:index 115;
+            lv2:maximum 1 ;
+            lv2:minimum 0 ;
+            lv2:name "Reset On Start" ;
+            lv2:portProperty lv2:toggled ;
+            lv2:symbol "_ic_pingpong_on_buildup_reset" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
+            lv2:default 0 ;
+            lv2:index 116;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Wet/Dry" ;
+            lv2:symbol "_k0_reverb_amount" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
+            lv2:default 0 ;
+            lv2:index 117;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Wet/Dry Modulation" ;
+            lv2:symbol "_k1_reverb_amount_mod" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
+            lv2:default 0 ;
+            lv2:index 118;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Feedback" ;
+            lv2:symbol "_k2_reverb_feedback" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
+            lv2:default 60 ;
+            lv2:index 119;
+            lv2:maximum 100 ;
+            lv2:minimum 0 ;
+            lv2:name "Damping" ;
+            lv2:symbol "_k3_reverb_damp" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
+            lv2:default 5 ;
+            lv2:index 120;
+            lv2:maximum 25000 ;
+            lv2:minimum 5 ;
+            lv2:name "Low Cut" ;
+            lv2:symbol "_k4_reverb_lowcut" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
+            lv2:default 24000 ;
+            lv2:index 121;
+            lv2:maximum 25000 ;
+            lv2:minimum 5 ;
+            lv2:name "High Cut" ;
+            lv2:symbol "_k5_reverb_highcut" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
+            lv2:default 3000 ;
+            lv2:index 122;
+            lv2:maximum 25000 ;
+            lv2:minimum 0 ;
+            lv2:name "Cross Freq" ;
+            lv2:symbol "_k6_reverb_crossfreq" ],
+        [ a lv2:ControlPort,
+                lv2:InputPort ;
+            pg:group <lv2://nobisoft.de/Perfomix#52_reverb_group> ;
+            lv2:default 0 ;
+            lv2:index 123;
+            lv2:maximum 2800 ;
+            lv2:minimum 0 ;
+            lv2:name "Predelay" ;
+            lv2:symbol "_k7_reverb_predelay" ],
+        [ a lv2:ControlPort,
+                lv2:OutputPort ;
+            lv2:index 124;
+            lv2:maximum 1 ;
+            lv2:minimum 0 ;
+            lv2:name "buildup position" ;
+            lv2:symbol "buildup_position" ],
+        [ a lv2:ControlPort,
+                lv2:OutputPort ;
+            lv2:index 125;
+            lv2:maximum 400 ;
+            lv2:minimum 10 ;
+            lv2:name "Host BPM" ;
+            lv2:symbol "host_bpm" ]
+            ;
     lv2:requiredFeature opts:options,
         <http://lv2plug.in/ns/ext/urid#map> ;
     doap:license "lic:GPLv3" ;
