@@ -1,0 +1,638 @@
+ \documentclass[a4paper,landscape,bottom=2cm]{article}
+ \usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\renewcommand{\rmdefault}{cmss}
+\geometry{margin=1cm,bottom=2cm}
+
+\begin{document}
+
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyhead[L]{Karteikarten}
+%\fancyhead[R]{\thepage}
+
+
+\newcommand{\karteikarte}[2]{
+    \begin{minipage}[c][12cm]{0.7\textwidth}
+        \includegraphics[height=12cm]{#1}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[c][12cm]{0.25\textwidth}
+	%\vspace{1cm} % Abstand von oben
+    #2 % Text
+    \end{minipage}
+}
+
+
+\newcommand{\textzeilen}[4]{
+	\vspace{1.2cm}
+    \begin{minipage}[c][2.7cm]{\textwidth} \large
+    #1
+    \end{minipage}
+    \vfill
+    \begin{minipage}[c][2.7cm]{\textwidth} \large
+    #2
+    \end{minipage}
+    \vfill
+    \begin{minipage}[c][2.7cm]{\textwidth} \large
+    #3
+    \end{minipage}
+    \vfill
+    \begin{minipage}[c][2.7cm]{\textwidth} \large
+    #4
+    \end{minipage}
+    \vfill
+}
+
+\karteikarte{perfomix_screens-01.png}{\textzeilen
+	{
+Crossfader sets the Wet/Dry amount of original and effects audio. \\ If the value is higher than approx. 3 \%, the build-up starts (looper too). 
+	}
+	{
+Start or stop the build-up (and/or looper). Equivalent to 100 \% crossfading. 
+	}
+	{
+If build-up style is set to "manual", this sets the internal automation variable. 
+	}
+	{
+
+	}
+}
+
+
+\karteikarte{perfomix_screens-02.png}{\textzeilen
+	{
+This is only a proxy configuration and cannot be changed. It represents the host's tempo, but does not show the correct value. 
+	}
+	{
+if "Sync Host BPM" is OFF, this sets the tempo of the looper, build-up and delay
+	}
+	{
+Defaults to host's tempo setting (ON). 
+	}
+	{
+
+	}
+}
+
+\karteikarte{perfomix_screens-03.png}{\textzeilen
+	{
+Sets looper function. \\
+If build-up starts, the looper starts to record for the required time, and repeats after this period.
+	}
+	{
+Length of loop is calculated by multiplying "note's measure" x "measure counter", if triplet is OFF.
+	}
+	{
+Set the note's measure length.
+	}
+	{
+Note's length is divided by 3 \\ 
+1/4 note length with triplet = 1/12 note's length
+	}
+}
+
+\karteikarte{perfomix_screens-04.png}{\textzeilen
+	{
+	Build-up automation \\
+\textbf{up+hold:} 0 - 100 \%  \\
+\textbf{up+repeat:} 0 - 100 \% cyclic  \\
+\textbf{up+down:} 0 - 100 - 0 \% cyclic \\
+\textbf{manual:} "Manual FX" knob on mixer screen
+	}
+	{
+Length of build-up sequence in 1/4 notes.
+	}
+	{
+
+	}
+	{
+
+	}
+}
+
+\karteikarte{perfomix_screens-05.png}{\textzeilen
+	{
+Maximum volume of the low pass filtered noise source, \\ with a filter sweep  during build-up
+	}
+	{
+Minimum low pass filter value
+	}
+	{
+Maximum low pass filter value \\
+If you change min and max values, the filter closes  during build-up
+}
+	{
+Linearity of the filter sweep. \\
+0.25 square root function \\
+1.0 continuous change from 0 - 100 \% \\
+4.0 quadrupol function
+	}
+}
+
+\karteikarte{perfomix_screens-06.png}{\textzeilen
+	{
+Amount of frequency modulation during build-up of the low pass filter sweep
+	}
+	{
+Q factor of the low pass filter
+	}
+	{
+ON: noise source is sent through the effects chain \\
+OFF:  noise source is added to the modulated audio signal
+	}
+	{
+
+	}
+}
+
+\karteikarte{perfomix_screens-07.png}{\textzeilen
+	{
+Amount of wave folding
+	}
+	{
+Input signal drive for the wave folder
+	}
+	{
+Minimum folding factor of the wave folder
+	}
+	{
+Maximum folding factor of the wave folder
+	}
+}
+
+\karteikarte{perfomix_screens-08.png}{\textzeilen
+	{
+Linearity of the wave folder build-up \\
+0.25 square root function \\
+1.0 continuous change from 0 - 100 \% \\
+4.0 quadrupol function
+	}
+	{
+Amount of modulation from min to max folding value during build-up
+	}
+	{
+
+	}
+	{
+
+	}
+}
+
+\karteikarte{perfomix_screens-09.png}{\textzeilen
+	{
+Amount of signal distortion
+	}
+	{
+Minimum threshold value for the signal distortion
+	}
+	{
+Maximum threshold value for the signal distortion
+	}
+	{
+Linearity of the distortion threshold build-up \\
+0.25 square root function \\
+1.0 continuous change from 0 - 100 \% \\
+4.0 quadrupol function
+	}
+}
+
+\karteikarte{perfomix_screens-10.png}{\textzeilen
+	{
+Amount of threshold modulation during build-up
+	}
+	{
+Minimum distortion bias value for the signal
+	}
+	{
+Maximum distortion bias value for the signal
+	}
+	{
+Linearity of the distortion bias build-up \\
+0.25 square root function \\
+1.0 continuous change from 0 - 100 \% \\
+4.0 quadrupol function
+	}
+}
+
+\karteikarte{perfomix_screens-11.png}{\textzeilen
+	{
+Amount of bias modulation during build-up
+	}
+	{
+
+	}
+	{
+
+	}
+	{
+
+	}
+}
+
+\karteikarte{perfomix_screens-12.png}{\textzeilen
+	{
+Amount of frequency shift of audio signal
+	}
+	{
+Minimum frequency shift value
+	}
+	{
+Maximum frequency shift value
+	}
+	{
+Linearity of the frequency shift build-up \\
+0.25 square root function \\
+1.0 continuous change from 0 - 100 \% \\
+4.0 quadrupol function
+	}
+}
+
+\karteikarte{perfomix_screens-13.png}{\textzeilen
+	{
+Amount of frequency shift modulation during build-up
+	}
+	{
+	}
+	{
+	}
+	{
+	}
+}
+
+\karteikarte{perfomix_screens-14.png}{\textzeilen
+	{
+Amount of stereo stuttered signal 
+
+	}
+	{
+Base interval of stereo stutter effect. \\
+If modulated, the value will be divided musically
+	}
+	{
+harshness of the edges of the stutter effect
+	}
+	{
+rythmically change of the stutter effect \\ 
+(= faster stuttering during build-up)
+	}
+}
+
+\karteikarte{perfomix_screens-15.png}{\textzeilen
+	{
+Amount of stereo switcher effect \\ (L-R-...) 
+	}
+	{
+Base interval of stereo stuttering. \\
+If modulation is ON, the value is changed musically
+	}
+	{
+rythmically change of the stutter effect \\ 
+(= faster stuttering during build-up)
+	}
+	{
+
+	}
+}
+
+\karteikarte{perfomix_screens-16.png}{\textzeilen
+	{
+Amount of stutter effect \\
+both channels are off at the same time
+	}
+	{
+Base interval of stuttering. \\
+If modulation is ON, the value is changed musically
+	}
+	{
+Gate length, \\ from approx. 10 \% to 90 \%
+	}
+	{
+harshness of the edges of the stutter effect
+	}
+}
+
+\karteikarte{perfomix_screens-17.png}{\textzeilen
+	{
+rythmically change of the stutter effect \\ 
+(= faster stuttering during build-up)
+	}
+	{
+
+	}
+	{
+
+	}
+	{
+
+	}
+}
+
+\karteikarte{perfomix_screens-18.png}{\textzeilen
+	{
+Amount of low pass filter of the audio signal
+	}
+	{
+Amount of high pass filter of the audio signal
+	}
+	{
+Amount of band pass filter of the audio signal
+	}
+	{
+Amount of notch pass filter of the audio signal
+	}
+}
+
+\karteikarte{perfomix_screens-19.png}{\textzeilen
+	{
+Low pass filter frequency for build-up beginning (0 \%)
+	}
+	{
+Low pass filter frequency for build-up end (100 \%)
+	}
+	{
+Linearity of the filter frequency during build-up \\
+0.25 square root function \\
+1.0 continuous change from 0 - 100 \% \\
+4.0 quadrupol function
+	}
+	{
+Amount of frequency change during build-up	}
+}
+
+\karteikarte{perfomix_screens-20.png}{\textzeilen
+	{
+Low pass Q factor for build-up beginning (0 \%)
+	}
+	{
+Low pass Q factor for build-up end (100 \%)
+	}
+	{
+Linearity of the Q factor during build-up \\
+0.25 square root function \\
+1.0 continuous change from 0 - 100 \% \\
+4.0 quadrupol function
+	}
+	{
+Amount of Q factor change during build-up
+	}
+}
+
+\karteikarte{perfomix_screens-21.png}{\textzeilen
+	{
+High pass filter frequency for build-up beginning (0 \%)
+	}
+	{
+High pass filter frequency for build-up end (100 \%)
+	}
+	{
+Linearity of the filter frequency during build-up \\
+0.25 square root function \\
+1.0 continuous change from 0 - 100 \% \\
+4.0 quadrupol function
+	}
+	{
+Amount of frequency change during build-up	}
+}
+
+\karteikarte{perfomix_screens-22.png}{\textzeilen
+	{
+High pass Q factor for build-up beginning (0 \%)
+	}
+	{
+High pass Q factor for build-up end (100 \%)
+	}
+	{
+Linearity of the Q factor during build-up \\
+0.25 square root function \\
+1.0 continuous change from 0 - 100 \% \\
+4.0 quadrupol function
+	}
+	{
+Amount of Q factor change during build-up
+	}
+}
+
+\karteikarte{perfomix_screens-23.png}{\textzeilen
+	{
+Band pass filter frequency for build-up beginning (0 \%)
+	}
+	{
+Band pass filter frequency for build-up end (100 \%)
+	}
+	{
+Linearity of the filter frequency during build-up \\
+0.25 square root function \\
+1.0 continuous change from 0 - 100 \% \\
+4.0 quadrupol function
+	}
+	{
+Amount of frequency change during build-up	}
+}
+
+\karteikarte{perfomix_screens-24.png}{\textzeilen
+	{
+Band pass Q factor for build-up beginning (0 \%)
+	}
+	{
+Band pass Q factor for build-up end (100 \%)
+	}
+	{
+Linearity of the Q factor during build-up \\
+0.25 square root function \\
+1.0 continuous change from 0 - 100 \% \\
+4.0 quadrupol function
+	}
+	{
+Amount of Q factor change during build-up
+	}
+}
+
+\karteikarte{perfomix_screens-25.png}{\textzeilen
+	{
+Notch filter frequency for build-up beginning (0 \%)
+	}
+	{
+Notch filter frequency for build-up end (100 \%)
+	}
+	{
+Linearity of the filter frequency during build-up \\
+0.25 square root function \\
+1.0 continuous change from 0 - 100 \% \\
+4.0 quadrupol function
+	}
+	{
+Amount of frequency change during build-up	}
+}
+
+\karteikarte{perfomix_screens-26.png}{\textzeilen
+	{
+Notch filter Q factor for build-up beginning (0 \%)
+	}
+	{
+Notch filter Q factor for build-up end (100 \%)
+	}
+	{
+Linearity of the Q factor during build-up \\
+0.25 square root function \\
+1.0 continuous change from 0 - 100 \% \\
+4.0 quadrupol function
+	}
+	{
+Amount of Q factor change during build-up
+	}
+}
+
+\karteikarte{perfomix_screens-27.png}{\textzeilen
+	{
+Amount of flanger audio effect
+	}
+	{
+Maximum frequency of the flanger effect
+	}
+	{
+0 \%: flanger effect with constant frequency \\
+100 \%: flanger effect changes during build-up from 0 Hz to maximum frequency value
+	}
+	{
+Maximum feedback amount of the flanger signal
+	}
+}
+
+\karteikarte{perfomix_screens-28.png}{\textzeilen
+	{
+Feedback modulation amount. \\
+Changes from 0 to maximum feedback amount during build-up
+	}
+	{
+maximum depth of flanger effect
+	}
+	{
+Depth modulation amount. \\
+Changes from 0 to maximum depth amount during build-up
+	}
+	{
+
+	}
+}
+
+\karteikarte{perfomix_screens-29.png}{\textzeilen
+	{
+Amount of phaser effect
+	}
+	{
+maximum frequency of phaser effect
+	}
+	{
+amount of modulation of frequency during build-up. \\
+Changes from 0.01 Hz to maximum frequency during build-up
+	}
+	{
+reverses the modulation influence
+	}
+}
+
+\karteikarte{perfomix_screens-30.png}{\textzeilen
+	{
+Minimum amount of the delay effect during build-up
+	}
+	{
+Maximum amount of the delay effect during build-up
+	}
+	{
+Linearity of the delay amount modulation during build-up \\
+0.25 square root function \\
+1.0 continuous change from 0 - 100 \% \\
+4.0 quadrupol function
+	}
+	{
+Influence onto delay amount during build-up. \\
+0 \% : only the minimum value influences the delay amount
+	}
+}
+
+\karteikarte{perfomix_screens-31.png}{\textzeilen
+	{
+Minimum feedback amount of the delay effect during build-up
+	}
+	{
+Maximum feedback amount of the delay effect during build-up
+	}
+	{
+Linearity of the feedback modulation during build-up \\
+0.25 square root function \\
+1.0 continuous change from 0 - 100 \% \\
+4.0 quadrupol function
+	}
+	{
+influence onto delay feedback amount during build-up \\
+0 \%: only the minimum value influences the delay amount
+	}
+}
+
+\karteikarte{perfomix_screens-32.png}{\textzeilen
+	{
+triplet switch for the delay length
+	}
+	{
+tempo synchronized base length of the delay
+	}
+	{
+length of the delay for the left channel
+	}
+	{
+length of the delay for the right channel
+	}
+}
+
+\karteikarte{perfomix_screens-33.png}{\textzeilen
+	{
+ON: delay audio buffer is cleared after every build-up \\
+OFF: delay audio buffer is NOT cleared after build-up
+	}
+	{
+
+	}
+	{
+
+	}
+	{
+
+	}
+}
+
+\karteikarte{perfomix_screens-34.png}{\textzeilen
+	{
+Amount of reverberation
+	}
+	{
+0 \%: constant amount of reverb \\
+100 \%: amount of reverb is changed from 0 \% to 100 \% during build-up
+	}
+	{
+reverb feedback \\
+(can be 100 \% )
+	}
+	{
+damping factor of the reverb
+	}
+}
+
+\karteikarte{perfomix_screens-35.png}{\textzeilen
+	{
+low cut filter of the reverb's tail
+	}
+	{
+high cut filter of the reverb's tail
+	}
+	{
+cross frequency split between longer low frequency and shorter high frequency reverb
+	}
+	{
+predelay value of the reverb
+	}
+}
+
+
+\end{document}
