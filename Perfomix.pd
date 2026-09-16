@@ -9,7 +9,7 @@
 #X obj 1236 603 *~;
 #X obj 39 149 change;
 #X obj 615 649 hsl 128 17 0 9 0 0 empty empty empty -2 -8 0 10 #e4e4e4 #4d4d4d #373737 0 1;
-#N canvas 0 50 450 300 repeater 1;
+#N canvas 0 50 450 300 repeater 0;
 #X obj 236 105 inlet~ audio_l;
 #X obj 334 105 inlet~ audio_r;
 #X obj 697 105 inlet bpm;
@@ -373,7 +373,8 @@
 #X obj 511 749 == 3;
 #X obj 279 760 == 4;
 #X obj 571 1194 outlet crossfader-off;
-#X obj 570 797 spigot;
+#X obj 514 944 == 0;
+#X msg 514 970 0;
 #X connect 0 0 2 0;
 #X connect 1 0 19 0;
 #X connect 2 0 6 0;
@@ -445,15 +446,15 @@
 #X connect 64 0 66 0;
 #X connect 65 0 71 0;
 #X connect 66 0 43 0;
+#X connect 66 0 74 0;
 #X connect 67 0 64 0;
 #X connect 68 0 67 0;
 #X connect 69 0 70 0;
 #X connect 70 0 67 0;
-#X connect 70 0 74 0;
 #X connect 71 0 64 1;
-#X connect 71 0 74 1;
 #X connect 72 0 63 1;
-#X connect 74 0 73 0;
+#X connect 74 0 75 0;
+#X connect 75 0 73 0;
 #X restore 914 236 pd buildup_ramp;
 #X floatatom 61 799 5 0 0 0 - - - 12;
 #X obj 48 649 tgl 25 0 empty empty empty 17 7 0 10 #e4e4e4 #4d4d4d #373737 0 1;
