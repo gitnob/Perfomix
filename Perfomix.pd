@@ -9,7 +9,7 @@
 #X obj 1236 603 *~;
 #X obj 39 149 change;
 #X obj 615 649 hsl 128 17 0 9 0 0 empty empty empty -2 -8 0 10 #e4e4e4 #4d4d4d #373737 0 1;
-#N canvas 0 50 450 300 repeater 0;
+#N canvas 0 50 450 300 repeater 1;
 #X obj 236 105 inlet~ audio_l;
 #X obj 334 105 inlet~ audio_r;
 #X obj 697 105 inlet bpm;
@@ -3690,8 +3690,9 @@
 #X obj 322 376 f;
 #X obj 602 395 t b f;
 #X obj 47 766 r _20_buildup_style @hv_param 0 4 1;
-#X obj 1023 279 s \$0-crossfader_onoff;
 #X floatatom 1201 267 5 0 0 0 - - - 12;
+#X obj 1023 279 s \$0-internal_off;
+#X obj 557 54 r \$0-internal_off;
 #X connect 1 0 40 0;
 #X connect 2 0 6 0;
 #X connect 2 0 10 0;
@@ -3830,3 +3831,4 @@
 #X connect 132 1 128 0;
 #X connect 132 1 125 0;
 #X connect 133 0 16 0;
+#X connect 136 0 39 0;
